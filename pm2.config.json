@@ -1,0 +1,43 @@
+{
+    "apps": [
+        {
+            "name": "express-demo-default",
+            "script": "app.js",
+            "merge_logs": true,
+            "exec_interpreter": "node",
+            "exec_mode": "fork",
+            "instances": 1,
+            "autorestart": true,
+            "max_memory_restart": "300M",
+            "env": {
+                "NODE_ENV": "production"
+            }
+        },
+        {
+            "name": "express-demo-test",
+            "script": "app.js",
+            "merge_logs": true,
+            "exec_interpreter": "node",
+            "exec_mode": "fork",
+            "instances": 1,
+            "autorestart": true,
+            "max_memory_restart": "300M",
+            "env": {
+                "NODE_ENV": "test"
+            }
+        },
+        {
+            "name": "express-demo-prod",
+            "script": "app.js",
+            "merge_logs": true,
+            "exec_interpreter": "node",
+            "exec_mode": "fork",
+            "instances": 1,
+            "autorestart": true,
+            "max_memory_restart": "300M",
+            "env": {
+                "NODE_ENV": "prod"
+            }
+        }
+    ]
+}
