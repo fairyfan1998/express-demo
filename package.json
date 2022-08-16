@@ -6,13 +6,15 @@
   "dependencies": {
     "express": "^4.17.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  },
   "scripts": {
+    "dev": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "pm2-test":"pm2 start pm2.config.json --only=express-demo-test",
-    "pm2-prod":"pm2 start pm2.config.json --only=express-demo-prod",
-    "pm2-dev":"pm2 start pm2.config.json --only=express-demo-default"
-
+    "pm2-test": "pm2 start pm2.config.json --only=express-demo-test",
+    "pm2-prod": "pm2 start pm2.config.json --only=express-demo-prod",
+    "pm2-dev": "pm2 start pm2.config.json --only=express-demo-default"
   },
   "keywords": [
     "Rong姐姐好可爱"

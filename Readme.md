@@ -1,7 +1,7 @@
 <!--
  * @Description: 项目文档说明
  * @Version: Beata1.0
- * @Autor: 【B站&公众号】Rong姐姐好可爱
+ * @Author: 【B站&公众号】Rong姐姐好可爱
  * @Date: 2020-09-13 22:33:09
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
  * @LastEditTime: 2020-09-14 23:54:22
@@ -18,7 +18,7 @@
 
 ## 项目结构
 
-```bash
+```text
 ├── Readme.md       ## 说明文档
 ├── app.js          ## 启动文件
 ├── config          ## 配置文件
