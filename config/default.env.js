@@ -6,8 +6,8 @@
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
  * @LastEditTime: 2020-09-14 23:56:21
  */
-'use strict';
 
-module.exports={
-    port:8000
-}
+export default {
+  port: 8000,
+  hostname: '0.0.0.0'
+};

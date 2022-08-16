@@ -1,4 +1,3 @@
-'use strict';
 /*
  * @Description: test service层方法封装示例,使用的时候，直接进行require
  * @Version: Beata1.0
@@ -9,17 +8,15 @@
  */
 
 /**
- * 
+ *
  * @param {Object} opts 参数对象
  */
-async function doSomething(opts){
-    return opts;
+async function doSomething(opts) {
+  return opts;
 }
-
-
 
 // 方法导出
 
-module.exports={
-    doSomething
-}
+module.exports = {
+  doSomething
+};

@@ -1,11 +1,10 @@
-'use strict'
 /*
- * @Description: 
+ * @Description:
  * @Version: Beata1.0
  * @Author: 【B站&公众号】Rong姐姐好可爱
- * @Date: 2020-09-15 00:00:42
+ * @Date: 2020-09-15 23:43:59
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2020-09-15 00:04:07
+ * @LastEditTime: 2020-09-15 23:50:58
  */
 
 /**
@@ -14,14 +13,8 @@
  * @param res 请求响应对象
  * @param next 方法，中间件链式调用时使用
  */
-async function checkRouterHealth(req,res,next){
-    
-    return next({
-        code:200
-    })
-    
-}
+async function doSomething(req, res, next) {}
 
-module.exports={
-    checkRouterHealth
-}
+module.exports = {
+  doSomething
+};

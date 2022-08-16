@@ -1,3 +1,4 @@
+'use strict';
 /*
  * @Description: 项目启动入口
  * @Version: Beata1.0
@@ -6,7 +7,6 @@
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
  * @LastEditTime: 2020-09-15 23:38:15
  */
-'use strict';
 
 const express=require('express');
 
@@ -28,10 +28,9 @@ app.use('/',(req,res,next)=>{
 })
 
 // 启动项目
-
-
 app.listen('3000','127.0.0.1',res=>{
-    console.log(res);
+    console.log(res)
+    console.log(process.env.NODE_ENV)
     console.log('express project started at : http://127.0.0.1:3000')
 })
 

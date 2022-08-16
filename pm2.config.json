@@ -2,7 +2,7 @@
     "apps": [
         {
             "name": "express-demo-default",
-            "script": "app.js",
+            "script": "src/app.js",
             "merge_logs": true,
             "exec_interpreter": "node",
             "exec_mode": "fork",
@@ -15,7 +15,7 @@
         },
         {
             "name": "express-demo-test",
-            "script": "app.js",
+            "script": "src/app.js",
             "merge_logs": true,
             "exec_interpreter": "node",
             "exec_mode": "fork",
@@ -28,7 +28,7 @@
         },
         {
             "name": "express-demo-prod",
-            "script": "app.js",
+            "script": "src/app.js",
             "merge_logs": true,
             "exec_interpreter": "node",
             "exec_mode": "fork",
