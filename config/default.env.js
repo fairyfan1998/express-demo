@@ -9,5 +9,11 @@
 
 module.exports = {
   port: 8000,
-  hostname: "127.0.0.1"
+  hostname: "127.0.0.1",
+  sequelize: {
+    username: "root",
+    password: 123456,
+    database: "express-demo",
+    options: {},
+  },
 };
