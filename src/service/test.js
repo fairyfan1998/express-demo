@@ -6,17 +6,8 @@
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
  * @LastEditTime: 2020-09-17 22:33:28
  */
+export default class {
+  constructor() {}
 
-/**
- *
- * @param {Object} opts 参数对象
- */
-async function doSomething(opts) {
-  return opts;
+  test() {}
 }
-
-// 方法导出
-
-module.exports = {
-  doSomething
-};

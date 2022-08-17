@@ -16,6 +16,3 @@
 export const checkRouterHealth = async (req, res, next) => next({
   code: 200
 });
-export const checkRouterHealth1 = async (req, res, next) => next({
-  code: 200
-});

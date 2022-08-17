@@ -1,33 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b3cd0beb-dc1e-47b3-928d-80e382450b67" name="默认变更列表" comment="feat: 支持nodemon启动，支持热加载">
-      <change afterPath="$PROJECT_DIR$/.eslintignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jsLinters/eslint.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nodemon.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/common/redis-cache/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/common/utils/index.js" afterDir="false" />
+    <list default="true" id="b3cd0beb-dc1e-47b3-928d-80e382450b67" name="默认变更列表" comment="feat: add eslint 、prettier rule">
+      <change afterPath="$PROJECT_DIR$/src/common/redis-cache/redis-string.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/utils/data-response.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/utils/data-transform.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/utils/logger.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/middleware/error-handler.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/middleware/logger-handler.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/default.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/default.env.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/prod.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/prod.env.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/test.env.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/health.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/health.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/global_variables.js" beforeDir="false" afterPath="$PROJECT_DIR$/global_variables.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default.env.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/default.env.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/prod.env.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/prod.env.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/test.env.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/test.env.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/global_variables.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pm2.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/pm2.config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/router/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/Readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/router/health.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/health.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/Readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/utils/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/utils/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/health.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/health.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,16 +68,15 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="code.cleanup.on.save" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="js.linters.configure.manually.selectedeslint" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
-    <property name="node.js.selected.package.eslint" value="$PROJECT_DIR$/node_modules/eslint" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
     <property name="rearrange.code.on.save" value="true" />
-    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
+    <property name="settings.editor.selected.configurable" value="actions.on.save" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -119,7 +111,8 @@
       <option name="presentableId" value="Default" />
       <updated>1651978305475</updated>
       <workItem from="1651978308739" duration="699000" />
-      <workItem from="1660641518973" duration="6507000" />
+      <workItem from="1660641518973" duration="6619000" />
+      <workItem from="1660724947097" duration="6397000" />
     </task>
     <task id="LOCAL-00001" summary="feat: 支持nodemon启动，支持热加载">
       <created>1660646848713</created>
@@ -128,7 +121,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660646848714</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat: add eslint 、prettier rule">
+      <created>1660652682516</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1660652682525</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -159,7 +159,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: 支持nodemon启动，支持热加载" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: 支持nodemon启动，支持热加载" />
+    <MESSAGE value="feat: add eslint 、prettier rule" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add eslint 、prettier rule" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

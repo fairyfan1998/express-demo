@@ -6,6 +6,6 @@
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
  * @LastEditTime: 2020-09-14 23:57:34
  */
-export default {
+module.exports = {
   port: 8000
 };

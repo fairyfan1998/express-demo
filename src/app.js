@@ -1,4 +1,3 @@
-'use strict';
 /*
  * @Description: 项目启动入口
  * @Version: Beata1.0
@@ -8,32 +7,36 @@
  * @LastEditTime: 2020-09-15 23:38:15
  */
 
-const express=require('express');
-
-
 // 获取express对象
-const app=express()
 
-app.use('/',(req,res,next)=>{
-    const query=req.query;
-    const body=req.body;
-    const params=req.params
-    console.log('query:',query)
+const express = require("express");
+const { globalConfig } = require("../config");
+const { loggerHandler } = require("./middleware/logger-handler");
+const { logger } = require("./common/utils");
+const app = express();
+const router = express.Router();
 
-    // 返回结果
-
-    res.send({
-        code:200
-    })
-})
+// 中间件使用
+app.use(loggerHandler);
+router.get("/", (req, res) => {
+  const { query } = req;
+  const { body } = req;
+  const { params } = req;
+  console.log("query:", query);
+  // 返回结果
+  res.status(200);
+  res.send({
+    code: 200
+  });
+});
+router.get("/test", function (req, res) {
+  res.send("hello world");
+});
 
 // 启动项目
-app.listen('3000','127.0.0.1',res=>{
-    console.log(res)
-    console.log(process.env.NODE_ENV)
-    console.log('express project started at : http://127.0.0.1:3000')
-})
-
-
-
-
+app.listen(globalConfig.port, globalConfig.hostname, () => {
+  // console.log(app, app._router);
+  logger.info(
+    `express-demo started at : http://${globalConfig.hostname}:${globalConfig.port}`
+  );
+});

@@ -7,7 +7,7 @@
  * @LastEditTime: 2020-09-14 23:56:21
  */
 
-export default {
+module.exports = {
   port: 8000,
-  hostname: '0.0.0.0'
+  hostname: "127.0.0.1"
 };
