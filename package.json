@@ -2,15 +2,19 @@
   "name": "express-demo",
   "version": "1.0.0",
   "description": "express框架基础项目结构示例",
-  "main": "app.js",
+  "main": "src/app.js",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "file-stream-rotator": "^0.6.1",
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.19"
+    "eslint": "^8.22.0",
+    "nodemon": "^2.0.19",
+    "prettier": "^2.7.1"
   },
   "scripts": {
-    "dev": "nodemon app.js",
+    "dev": "NODE_ENV=development nodemon src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "pm2-test": "pm2 start pm2.config.json --only=express-demo-test",
     "pm2-prod": "pm2 start pm2.config.json --only=express-demo-prod",
