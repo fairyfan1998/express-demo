@@ -7,7 +7,10 @@ class SequelizeFactory {
     this[instance] = new sequelize(database, username, password, options);
   }
 
-  static getSingleInstance() {
+  /**
+   * 创建sequelize连接单例
+   */
+  getSingleInstance() {
     const { database, username, password, options } = this;
     if (this[instance] === null) {
       this[instance] = new SequelizeFactory(
