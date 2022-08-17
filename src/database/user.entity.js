@@ -9,29 +9,29 @@ module.exports = (sequelizeConn) =>
     "User",
     {
       username: {
-        type: STRING,
+        type: STRING
       },
       password: {
-        type: STRING,
+        type: STRING
       },
       create_time: {
         type: BIGINT(13),
-        defaultValue: new Date().getTime(),
+        defaultValue: new Date().getTime()
       },
       update_time: {
         type: BIGINT(13),
-        defaultValue: 0,
+        defaultValue: 0
       },
       delete_time: {
         type: BIGINT(13),
-        defaultValue: 0,
-      },
+        defaultValue: 0
+      }
     },
     {
       // 指定数据库中对应的tbl_user表
       tableName: "tbl_user",
       freezeTableName: false,
       // 是否自动添加时间戳createAt，updateAt
-      timestamps: false,
+      timestamps: false
     }
   );

@@ -1,13 +1,12 @@
 "use strict";
 
 const { userEntity } = require("../database");
+const BaseService = require("./base.service");
 
 /**
  * 用户实体操作类，专注业务逻辑
  */
-class UserService {
-  constructor() {}
-
+class UserService extends BaseService {
   async createUser(user) {
     return userEntity.create(user);
   }

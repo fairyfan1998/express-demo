@@ -14,6 +14,13 @@ module.exports = {
     username: "root",
     password: 123456,
     database: "express-demo",
-    options: {},
+    options: {}
   },
+  redis: {
+    port: 6379,
+    host: "127.0.0.1",
+    username: "default",
+    password: "",
+    db: 10
+  }
 };

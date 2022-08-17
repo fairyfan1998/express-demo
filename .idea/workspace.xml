@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b3cd0beb-dc1e-47b3-928d-80e382450b67" name="默认变更列表" comment="feat: add eslint 、prettier rule">
-      <change afterPath="$PROJECT_DIR$/src/database/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/sequelize.factory.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/user.entity.js" afterDir="false" />
+    <list default="true" id="b3cd0beb-dc1e-47b3-928d-80e382450b67" name="默认变更列表" comment="feat: add user entity service">
+      <change afterPath="$PROJECT_DIR$/src/common/redis-cache/redis.factory.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/database/base.entity.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/service/base.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/default.env.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/default.env.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/redis-cache/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/redis-cache/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/redis-cache/redis-string.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/redis-cache/redis-string.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/sequelize.factory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/sequelize.factory.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/user.entity.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/user.entity.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/user.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/user.service.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,8 +69,11 @@
     <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
+    <property name="project.structure.last.edited" value="项目" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="rearrange.code.on.save" value="true" />
-    <property name="settings.editor.selected.configurable" value="actions.on.save" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -100,6 +111,7 @@
       <workItem from="1651978308739" duration="699000" />
       <workItem from="1660641518973" duration="6619000" />
       <workItem from="1660724947097" duration="6397000" />
+      <workItem from="1660751989138" duration="2005000" />
     </task>
     <task id="LOCAL-00001" summary="feat: 支持nodemon启动，支持热加载">
       <created>1660646848713</created>
@@ -115,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660652682525</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feat: add user entity service">
+      <created>1660748522763</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1660748522763</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,7 +154,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: 支持nodemon启动，支持热加载" />
     <MESSAGE value="feat: add eslint 、prettier rule" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add eslint 、prettier rule" />
+    <MESSAGE value="feat: add user entity service" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add user entity service" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

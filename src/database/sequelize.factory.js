@@ -4,7 +4,10 @@ const instance = Symbol("sequelize#instance");
 
 class SequelizeFactory {
   constructor(database, username, password, options) {
-    this[instance] = new sequelize(database, username, password, options);
+    this.database = database;
+    this.username = username;
+    this.password = password;
+    this.options = options;
   }
 
   /**
@@ -13,12 +16,7 @@ class SequelizeFactory {
   getSingleInstance() {
     const { database, username, password, options } = this;
     if (this[instance] === null) {
-      this[instance] = new SequelizeFactory(
-        database,
-        username,
-        password,
-        options
-      );
+      this[instance] = new sequelize(database, username, password, options);
     }
     return this[instance];
   }
