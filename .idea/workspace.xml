@@ -2,25 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b3cd0beb-dc1e-47b3-928d-80e382450b67" name="默认变更列表" comment="feat: add eslint 、prettier rule">
-      <change afterPath="$PROJECT_DIR$/src/common/redis-cache/redis-string.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/common/utils/data-response.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/common/utils/data-transform.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/common/utils/logger.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/middleware/error-handler.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/middleware/logger-handler.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/database/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/database/sequelize.factory.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/database/user.entity.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/default.env.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/default.env.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/prod.env.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/prod.env.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/test.env.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/test.env.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/global_variables.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/utils/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/utils/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/health.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/health.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +71,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/database" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/docs" />
     </key>
@@ -139,19 +126,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="master" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
