@@ -2,10 +2,11 @@
   "name": "express-demo",
   "version": "0.0.1",
   "description": "express框架基础项目结构示例",
-  "main": "src/app.js",
+  "main": "src/index.js",
   "dependencies": {
     "express": "^4.17.1",
     "file-stream-rotator": "^0.6.1",
+    "fs": "^0.0.1-security",
     "ioredis": "^5.2.2",
     "morgan": "^1.10.0",
     "mysql2": "^2.3.3",
@@ -17,19 +18,20 @@
     "babel-preset-stage-2": "^6.24.1",
     "eslint": "^8.22.0",
     "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
     "nodemon": "^2.0.19",
     "prettier": "^2.7.1"
   },
   "scripts": {
-    "dev": "NODE_ENV=development nodemon src/app.js --exec babel-node",
-    "build": "babel src -d dist",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "NODE_ENV=development nodemon src/index.js --exec babel-node",
+    "build": "rm -rf dist && babel src -d dist",
     "pm2-test": "pm2 start pm2.config.json --only=express-demo-test",
     "pm2-prod": "pm2 start pm2.config.json --only=express-demo-prod",
     "pm2-dev": "pm2 start pm2.config.json --only=express-demo-default"
   },
   "keywords": [
-    "Rong姐姐好可爱"
+    "公众号：Rong姐姐好可爱",
+    "142vip"
   ],
   "author": "[Github&公众号]:Rong姐姐好可爱",
   "license": "MIT"

@@ -10,6 +10,9 @@ export default class {
     this.options = options;
   }
 
+  /**
+   * 创建单例，避免重复连接
+   */
   getSingleInstance() {
     const { options } = this;
     if (this[redisInstance] === null) {

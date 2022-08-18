@@ -1,7 +1,7 @@
 /**
  * 用户表
  */
-import { STRING } from 'sequelize';
+import { DataTypes } from 'sequelize';
 import baseEntity from './base.entity';
 
 export default function (sequelizeConn) {
@@ -9,11 +9,16 @@ export default function (sequelizeConn) {
     'User',
     {
       ...baseEntity,
+      id: {
+        type: DataTypes.INTEGER,
+        autoIncrement: true,
+        primaryKey: true
+      },
       username: {
-        type: STRING
+        type: DataTypes.STRING(40)
       },
       password: {
-        type: STRING
+        type: DataTypes.STRING(40)
       }
     },
     {

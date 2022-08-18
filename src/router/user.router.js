@@ -1,8 +1,16 @@
-const express = require('express');
-const UserController = require('../controller/user.controller');
+import { Router } from 'express';
+import UserController from '../controller/user.controller';
 
-const userRouter = express.Router();
+const userRouter = Router();
 const userController = new UserController();
-userRouter.get('/user/:id', userController.test);
+userRouter.get('/fix/:id', userController.test);
+userRouter.get('/go', (req, res) => {
+  // 返回结果
+  res.status(200);
+  res.send({ code: 2 });
+});
+userRouter.get('/test', (req, res) => {
+  res.send('hello world');
+});
 
-module.exports = userRouter;
+export default userRouter;

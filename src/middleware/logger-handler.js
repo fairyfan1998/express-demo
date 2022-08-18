@@ -1,7 +1,7 @@
 import morgan from 'morgan';
-import fs from 'fs';
 import FileStreamRotator from 'file-stream-rotator';
-import * as path from 'path';
+import path from 'path';
+import * as fs from 'fs';
 import { dataTransform, logger } from '../common/utils';
 
 const logDirectory = path.join(__dirname, 'run-logger');

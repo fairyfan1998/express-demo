@@ -12,9 +12,11 @@ export default {
   hostname: '127.0.0.1',
   sequelize: {
     username: 'root',
-    password: 123456,
+    password: '123456',
     database: 'express-demo',
-    options: {}
+    options: {
+      dialect: 'mysql'
+    }
   },
   redis: {
     port: 6379,

@@ -1,1 +1,1 @@
-export default function errorHandler(error, req, res, next) {}
+export default function (error, req, res, next) {}

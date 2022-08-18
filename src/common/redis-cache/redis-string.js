@@ -3,7 +3,7 @@ export default class {
     this.redis = redis;
   }
 
-  async test(key) {
+  async get(key) {
     return this.redis.get(key);
   }
 }
