@@ -13,6 +13,3 @@
  * @param res 请求响应对象
  * @param next 方法，中间件链式调用时使用
  */
-export const checkRouterHealth = async (req, res, next) => next({
-  code: 200
-});

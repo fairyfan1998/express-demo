@@ -1,26 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b3cd0beb-dc1e-47b3-928d-80e382450b67" name="默认变更列表" comment="feat: add eslint 、prettier rule">
-      <change afterPath="$PROJECT_DIR$/src/common/redis-cache/redis-string.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/common/utils/data-response.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/common/utils/data-transform.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/common/utils/logger.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/middleware/error-handler.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/middleware/logger-handler.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
+    <list default="true" id="b3cd0beb-dc1e-47b3-928d-80e382450b67" name="默认变更列表" comment="fix: update logger ,add eslint">
+      <change afterPath="$PROJECT_DIR$/src/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLinters/eslint.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLinters/eslint.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/default.env.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/default.env.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/prod.env.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/prod.env.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/test.env.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/test.env.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/global_variables.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/global-config/default.env.js" beforeDir="false" afterPath="$PROJECT_DIR$/global-config/default.env.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/redis-cache/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/redis-cache/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/redis-cache/redis-string.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/redis-cache/redis-string.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/redis-cache/redis.factory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/redis-cache/redis.factory.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/utils/data-response.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/utils/data-response.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/utils/data-transform.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/utils/data-transform.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/common/utils/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/utils/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/health.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/health.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/utils/logger.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/utils/logger.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/user.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/user.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/base.entity.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/base.entity.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/sequelize.factory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/sequelize.factory.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/user.entity.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/user.entity.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/middleware/error-handler.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware/error-handler.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/middleware/logger-handler.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware/logger-handler.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/user.router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/user.router.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +37,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="next" />
+        <entry key="$PROJECT_DIR$" value="feat/api" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -68,15 +72,19 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="code.cleanup.on.save" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="js.linters.configure.manually.selectedeslint" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.eslint" value="$PROJECT_DIR$/node_modules/eslint" />
     <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
+    <property name="project.structure.last.edited" value="项目" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="rearrange.code.on.save" value="true" />
-    <property name="settings.editor.selected.configurable" value="actions.on.save" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -85,6 +93,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/database" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/docs" />
     </key>
@@ -113,6 +122,7 @@
       <workItem from="1651978308739" duration="699000" />
       <workItem from="1660641518973" duration="6619000" />
       <workItem from="1660724947097" duration="6397000" />
+      <workItem from="1660751989138" duration="7655000" />
     </task>
     <task id="LOCAL-00001" summary="feat: 支持nodemon启动，支持热加载">
       <created>1660646848713</created>
@@ -128,7 +138,28 @@
       <option name="project" value="LOCAL" />
       <updated>1660652682525</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feat: add user entity service">
+      <created>1660748522763</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1660748522763</updated>
+    </task>
+    <task id="LOCAL-00004" summary="fix: add singleInstance redis">
+      <created>1660754581756</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1660754581756</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat: 优化service封装 , 新增airbnb的eslint规则">
+      <created>1660782924413</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1660782924413</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,19 +170,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="master" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -160,7 +179,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: 支持nodemon启动，支持热加载" />
     <MESSAGE value="feat: add eslint 、prettier rule" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add eslint 、prettier rule" />
+    <MESSAGE value="feat: add user entity service" />
+    <MESSAGE value="fix: add singleInstance redis" />
+    <MESSAGE value="feat: 优化service封装 , 新增airbnb的eslint规则" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 优化service封装 , 新增airbnb的eslint规则" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
