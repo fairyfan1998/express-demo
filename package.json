@@ -5,6 +5,7 @@
   "main": "src/index.js",
   "dependencies": {
     "express": "^4.17.1",
+    "express-swagger-generator": "^1.1.17",
     "file-stream-rotator": "^0.6.1",
     "fs": "^0.0.1-security",
     "ioredis": "^5.2.2",
@@ -19,8 +20,10 @@
     "eslint": "^8.22.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.26.0",
+    "express-list-routes": "^1.1.3",
     "nodemon": "^2.0.19",
-    "prettier": "^2.7.1"
+    "prettier": "^2.7.1",
+    "swagger-ui-express": "^4.5.0"
   },
   "scripts": {
     "dev": "NODE_ENV=development nodemon src/index.js --exec babel-node",
