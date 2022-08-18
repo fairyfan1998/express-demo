@@ -1,64 +1,10 @@
-"use strict";
-
-const { userEntity } = require("../database");
-const BaseService = require("./base.service");
+const BaseService = require('./base.service');
 
 /**
  * 用户实体操作类，专注业务逻辑
  */
-class UserService extends BaseService {
-  async createUser(user) {
-    return userEntity.create(user);
-  }
-
-  async updateUser(user) {
-    return userEntity.update(user);
-  }
-
-  /**
-   * 查询单条用户信息
-   * @param id
-   */
-  async findUserById(id) {
-    return userEntity.findOne({
-      raw: true,
-      where: { id },
-    });
-  }
-
-  /**
-   * 查询用户所有信息
-   */
-  async findUserList() {
-    return userEntity.findAndCountAll({
-      raw: true,
-    });
-  }
-
-  /**
-   * 逻辑删除，更新删除时间
-   * @param id
-   */
-  async deleteUserById(id) {
-    return userEntity.update(
-      {
-        delete_time: new Date().getTime(),
-      },
-      {
-        where: { id },
-      }
-    );
-  }
-
-  /**
-   * 物理删除
-   * @param id
-   */
-  async destroyUserById(id) {
-    return userEntity.destroy({
-      where: { id },
-    });
+export default class extends BaseService {
+  async test() {
+    return this.modelEntity.findAll();
   }
 }
-
-module.exports = UserService;

@@ -9,28 +9,28 @@
 
 // 获取express对象
 
-const express = require("express");
-const { globalConfig } = require("../config");
-const { loggerHandler } = require("./middleware/logger-handler");
-const { logger } = require("./common/utils");
+const express = require('express');
+const { globalConfig } = require('../config');
+const { loggerHandler } = require('./middleware/logger-handler');
+const { logger } = require('./common/utils');
+
 const app = express();
 const router = express.Router();
-
 // 中间件使用
 app.use(loggerHandler);
-router.get("/", (req, res) => {
+router.get('/', (req, res) => {
   const { query } = req;
   const { body } = req;
   const { params } = req;
-  console.log("query:", query);
+  console.log('query:', query);
   // 返回结果
   res.status(200);
   res.send({
     code: 200
   });
 });
-router.get("/test", function (req, res) {
-  res.send("hello world");
+router.get('/test', (req, res) => {
+  res.send('hello world');
 });
 
 // 启动项目

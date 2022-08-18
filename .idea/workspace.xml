@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b3cd0beb-dc1e-47b3-928d-80e382450b67" name="默认变更列表" comment="feat: add user entity service">
-      <change afterPath="$PROJECT_DIR$/src/common/redis-cache/redis.factory.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/base.entity.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/service/base.service.js" afterDir="false" />
+    <list default="true" id="b3cd0beb-dc1e-47b3-928d-80e382450b67" name="默认变更列表" comment="fix: add singleInstance redis">
       <change beforePath="$PROJECT_DIR$/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/default.env.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/default.env.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/redis-cache/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/redis-cache/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/redis-cache/redis-string.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/redis-cache/redis-string.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/sequelize.factory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/sequelize.factory.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/user.entity.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/user.entity.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/health.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/health.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/user.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/user.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/health.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/health.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/user.router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/user.router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/base.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/base.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/test.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/service/user.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/user.service.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -62,10 +63,11 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="code.cleanup.on.save" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="js.linters.configure.manually.selectedeslint" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.eslint" value="$PROJECT_DIR$/node_modules/eslint" />
     <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
@@ -111,7 +113,7 @@
       <workItem from="1651978308739" duration="699000" />
       <workItem from="1660641518973" duration="6619000" />
       <workItem from="1660724947097" duration="6397000" />
-      <workItem from="1660751989138" duration="2005000" />
+      <workItem from="1660751989138" duration="4834000" />
     </task>
     <task id="LOCAL-00001" summary="feat: 支持nodemon启动，支持热加载">
       <created>1660646848713</created>
@@ -134,7 +136,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660748522763</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="fix: add singleInstance redis">
+      <created>1660754581756</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1660754581756</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,7 +164,8 @@
     <MESSAGE value="feat: 支持nodemon启动，支持热加载" />
     <MESSAGE value="feat: add eslint 、prettier rule" />
     <MESSAGE value="feat: add user entity service" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add user entity service" />
+    <MESSAGE value="fix: add singleInstance redis" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: add singleInstance redis" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

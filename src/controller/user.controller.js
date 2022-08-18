@@ -1,9 +1,15 @@
-"use strict";
+import UserService from '../service/user.service';
+import { userEntity } from '../database';
 
-class UserController {
-  constructor(req, res) {}
+export default class UserController {
+  constructor() {
+    this.userService = new UserService(userEntity);
+  }
 
-  async test() {}
+  async test(req, res) {
+    console.log(req);
+    console.log(res);
+    const result = await this.userService.test();
+    return result;
+  }
 }
-
-module.exports = UserController;
