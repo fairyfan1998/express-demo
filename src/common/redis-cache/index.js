@@ -1,10 +1,9 @@
-"use strict";
+import RedisString from './redis-string';
+import RedisFactory from './redis.factory';
+import globalConfig from '../../../global-config';
 
-const RedisFactory = require("./redis.factory");
-const { globalConfig } = require("../../../config");
-const RedisString = require("./redis-string");
 const redisInstance = new RedisFactory(globalConfig.redis).getSingleInstance();
 
-module.exports = {
+export default {
   redisString: new RedisString(redisInstance)
 };

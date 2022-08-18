@@ -11,7 +11,7 @@ const express = require('express');
 const fs = require('fs');
 const path = require('path');
 
-// const router = express.Router();
+const router = express.Router();
 // fs.readdirSync(__dirname)
 //   .filter((file) => file.indexOf('.') !== -1 && file !== 'index.js')
 //   .forEach((file) => {

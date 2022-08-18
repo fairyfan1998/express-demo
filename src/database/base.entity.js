@@ -1,17 +1,25 @@
-"use strict";
+import { BIGINT } from 'sequelize';
 
-class BaseEntity {
-  async create() {}
-
-  async update() {}
-
-  async findOneById(id) {}
-
-  async deleteById() {}
-
-  async destroyById(id) {
-    return T.destroy({
-      where: { id },
-    });
+/**
+ * 数据库表通用字段
+ */
+export default {
+  create_time: {
+    field: 'create_time',
+    type: BIGINT(13),
+    defaultValue: new Date().getTime(),
+    comment: '创建时间'
+  },
+  update_time: {
+    field: 'update_time',
+    type: BIGINT(13),
+    defaultValue: 0,
+    comment: '更新时间'
+  },
+  delete_time: {
+    field: 'delete_time',
+    type: BIGINT(13),
+    defaultValue: 0,
+    comment: '删除时间'
   }
-}
+};

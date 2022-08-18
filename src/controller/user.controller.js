@@ -1,14 +1,14 @@
 import UserService from '../service/user.service';
-import { userEntity } from '../database';
+import database from '../database';
 
 export default class UserController {
-  constructor() {
-    this.userService = new UserService(userEntity);
+  constructor(req, res) {
+    this.req = req;
+    this.res = res;
+    this.userService = new UserService(database.userEntityRepo);
   }
 
-  async test(req, res) {
-    console.log(req);
-    console.log(res);
+  async test() {
     const result = await this.userService.test();
     return result;
   }

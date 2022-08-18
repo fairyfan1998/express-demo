@@ -1,17 +1,17 @@
-"use strict";
+import SequelizeFactory from './sequelize.factory';
+import UserEntity from './user.entity';
+import globalConfig from '../../global-config';
 
-const { globalConfig } = require("../../config");
-const userEntityInit = require("./user.entity");
-const sequelizeFactory = require("./sequelize.factory");
-
-const { username, password, database, options } = globalConfig.sequelize;
-const sequelizeInstance = new sequelizeFactory(
+const {
+  username, password, database, options
+} = globalConfig.sequelize;
+const sequelizeInstance = new SequelizeFactory(
   username,
   password,
   database,
   options
 ).getSingleInstance();
 
-module.exports = {
-  userEntity: userEntityInit(sequelizeInstance),
+export default {
+  userEntityRepo: UserEntity(sequelizeInstance)
 };

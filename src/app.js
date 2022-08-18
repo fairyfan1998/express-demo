@@ -9,10 +9,11 @@
 
 // 获取express对象
 
-const express = require('express');
-const { globalConfig } = require('../config');
-const { loggerHandler } = require('./middleware/logger-handler');
-const { logger } = require('./common/utils');
+// 参考：https://www.jianshu.com/p/d1661ca9fe68
+import express from 'express';
+import { loggerHandler } from './middleware/logger-handler';
+import globalConfig from '../global-config';
+import { logger } from './common/utils';
 
 const app = express();
 const router = express.Router();

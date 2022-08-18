@@ -7,20 +7,20 @@
  * @LastEditTime: 2020-09-14 23:56:21
  */
 
-module.exports = {
+export default {
   port: 8000,
-  hostname: "127.0.0.1",
+  hostname: '127.0.0.1',
   sequelize: {
-    username: "root",
+    username: 'root',
     password: 123456,
-    database: "express-demo",
+    database: 'express-demo',
     options: {}
   },
   redis: {
     port: 6379,
-    host: "127.0.0.1",
-    username: "default",
-    password: "",
+    host: '127.0.0.1',
+    username: 'default',
+    password: '',
     db: 10
   }
 };

@@ -1,11 +1,11 @@
-"use strict";
 /**
  * 参考：https://www.npmjs.com/package/ioredis
  */
-const redisInstance = Symbol("redis#instance");
-const Redis = require("ioredis");
+import Redis from 'ioredis';
 
-class RedisFactory {
+const redisInstance = Symbol('redis#instance');
+
+export default class {
   constructor(options) {
     this.options = options;
   }
@@ -18,5 +18,3 @@ class RedisFactory {
     return this[redisInstance];
   }
 }
-
-module.exports = RedisFactory;

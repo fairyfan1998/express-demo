@@ -1,8 +1,8 @@
-"use strict";
-const sequelize = require("sequelize");
-const instance = Symbol("sequelize#instance");
+const Sequelize = require('sequelize');
 
-class SequelizeFactory {
+const instance = Symbol('sequelize#instance');
+
+export default class SequelizeFactory {
   constructor(database, username, password, options) {
     this.database = database;
     this.username = username;
@@ -14,12 +14,12 @@ class SequelizeFactory {
    * 创建sequelize连接单例
    */
   getSingleInstance() {
-    const { database, username, password, options } = this;
+    const {
+      database, username, password, options
+    } = this;
     if (this[instance] === null) {
-      this[instance] = new sequelize(database, username, password, options);
+      this[instance] = new Sequelize(database, username, password, options);
     }
     return this[instance];
   }
 }
-
-module.exports = SequelizeFactory;

@@ -6,9 +6,10 @@
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
  * @LastEditTime: 2020-09-15 23:50:58
  */
-const UserController = require('./user.controller');
 
-module.exports = (req, res) => {
+import UserController from './user.controller';
+
+export default function (req, res) {
   const userController = new UserController(req, res);
   return { userController };
-};
+}

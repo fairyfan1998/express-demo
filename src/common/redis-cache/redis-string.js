@@ -1,13 +1,9 @@
-"use strict";
-
-class RedisString {
+export default class {
   constructor(redis) {
     this.redis = redis;
   }
 
-  get(key) {
+  async test(key) {
     return this.redis.get(key);
   }
 }
-
-module.exports = RedisString;
