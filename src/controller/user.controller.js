@@ -8,7 +8,7 @@ export default class UserController {
 
   /**
    * This function comment is parsed by doctrine
-   * @route GET /user
+   * @route GET /user/test
    * @group user - Operations about user
    * @param {string} email.query.required - username or email - eg: user@domain
    * @param {string} password.query.required - user's password.

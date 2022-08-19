@@ -9,8 +9,19 @@ userRouter.get('/go', (req, res) => {
   res.status(200);
   res.send({ code: 2 });
 });
-userRouter.get('/test', (req, res) => {
-  res.send('hello world');
-});
+
+/**
+ * @swagger
+ * /hello:
+ *   get:
+ *     tags:
+ *       - 测试
+ *     summary: GET 测试
+ *     description: 用于测试基础 GET 请求的接口
+ *     responses:
+ *       200:
+ *         description: 【成功】 返回 world
+ */
+userRouter.get('/test', (req, res) => {});
 
 export default userRouter;
