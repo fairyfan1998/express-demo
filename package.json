@@ -1,6 +1,6 @@
 {
   "name": "express-demo",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "express框架基础项目结构示例",
   "main": "src/index.js",
   "dependencies": {
