@@ -7,7 +7,7 @@
  * @LastEditTime: 2020-09-16 23:12:28
  */
 
-const healthController = require('../controller/health');
+const healthController = require('../controller/health.controller');
 
 module.exports = (router) => {
   // 项目的健康检查路由

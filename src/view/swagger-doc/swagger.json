@@ -1,0 +1,183 @@
+{
+  "host": "",
+  "swagger": "2.0",
+  "basePath": "/",
+  "info": {
+    "title": "egg-demo接口文档",
+    "description": "swagger 测试接口文档",
+    "version": "Beta0.0.1"
+  },
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "tags": [
+    {
+      "name": "user模块",
+      "description": ""
+    }
+  ],
+  "paths": {
+    "/api/v1/user": {
+      "post": {
+        "tags": [
+          "user模块"
+        ],
+        "summary": "添加用户 ",
+        "description": "添加用户 ",
+        "operationId": "controller-user-post /api/v1/user",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/createUserRule"
+            },
+            "name": "body",
+            "required": true,
+            "description": ""
+          }
+        ],
+        "security": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/api/v1/user/info": {
+      "post": {
+        "tags": [
+          "user模块"
+        ],
+        "summary": "更新用户信息 ",
+        "description": "",
+        "operationId": "controller-user-post /api/v1/user/info",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "security": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/api/v1/user/:id": {
+      "post": {
+        "tags": [
+          "user模块"
+        ],
+        "summary": "查询单条用户信息 ",
+        "description": "",
+        "operationId": "controller-user-post /api/v1/user/{id}",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "security": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/api/v1/user/list": {
+      "post": {
+        "tags": [
+          "user模块"
+        ],
+        "summary": "查询所有用户信息 ",
+        "description": "",
+        "operationId": "controller-user-post /api/v1/user/list",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "security": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "deprecated": false
+      }
+    }
+  },
+  "securityDefinitions": {},
+  "definitions": {
+    "createUserRule": {
+      "type": "object",
+      "required": [
+        "account",
+        "password"
+      ],
+      "properties": {
+        "account": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        }
+      }
+    },
+    "updateUserRule": {
+      "type": "object",
+      "required": [
+        "account",
+        "password"
+      ],
+      "properties": {
+        "account": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        }
+      }
+    },
+    "responseBody": {
+      "type": "object",
+      "required": [
+        "code",
+        "message",
+        "result"
+      ],
+      "properties": {
+        "code": {
+          "type": "number",
+          "example": 200
+        },
+        "message": {
+          "type": "string",
+          "example": "请求成功"
+        },
+        "result": {
+          "type": "boolean",
+          "example": "false | true"
+        }
+      }
+    }
+  }
+}

@@ -1,11 +1,12 @@
-const loggerProjectName = "express-demo";
+const instance = Symbol('logger#instance');
+const loggerProjectName = 'express-demo';
 
-class Logger {
-  static getInstance() {
-    if (this["logger"] == null) {
-      this["logger"] = new Logger();
+export default class Logger {
+  getInstance() {
+    if (this[instance] == null) {
+      this[instance] = new Logger();
     }
-    return this["logger"];
+    return this[instance];
   }
 
   info(message) {
@@ -20,5 +21,3 @@ class Logger {
     console.warn(`[${loggerProjectName}]:${message}`);
   }
 }
-
-module.exports = Logger;

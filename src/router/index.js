@@ -6,16 +6,12 @@
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
  * @LastEditTime: 2020-09-15 23:55:03
  */
+// 参考：https://www.codenong.com/14934452/
 
-const express = require('express');
-const fs = require('fs');
-const path = require('path');
+// eslint-disable-next-line import/no-extraneous-dependencies
+import userRouter from './user.router';
 
-const router = express.Router();
-fs.readdirSync(__dirname)
-  .filter((file) => file.indexOf('.') !== -1 && file !== 'index.js')
-  .forEach((file) => {
-    require(path.join(__dirname, file))(router);
-  });
-
-module.exports = router;
+export default function (app) {
+  app.use('/user', userRouter);
+  // expressListRoutes(userRouter, { prefix: '/user' });
+}
