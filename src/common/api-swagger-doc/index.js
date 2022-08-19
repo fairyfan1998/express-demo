@@ -2,7 +2,7 @@ import expressSwaggerGenerator from 'express-swagger-generator';
 import globalConfig from '../../../global-config';
 
 /**
- * swagger配置
+ * 配置 swagger-jsdoc
  */
 const swaggerOptions = {
   swaggerDefinition: {
@@ -29,9 +29,7 @@ const swaggerOptions = {
     docs: '/api-swagger.json' // swagger文件 api
   },
   basedir: __dirname, // app absolute path
-  files: ['src/controller/**/*.js'] // Path to the API handle folder
+  files: ['../../controller/*.js'] // Path to the API handle folder
 };
 
-export default function (app) {
-  expressSwaggerGenerator(app)(swaggerOptions);
-}
+export default (app) => expressSwaggerGenerator(app)(swaggerOptions);

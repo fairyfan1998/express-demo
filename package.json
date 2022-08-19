@@ -11,9 +11,7 @@
     "ioredis": "^5.2.2",
     "morgan": "^1.10.0",
     "mysql2": "^2.3.3",
-    "sequelize": "^6.21.3",
-    "swagger-jsdoc": "^6.2.5",
-    "swagger-ui-express": "^4.5.0"
+    "sequelize": "^6.21.3"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
