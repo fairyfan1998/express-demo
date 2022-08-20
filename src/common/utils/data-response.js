@@ -11,10 +11,11 @@ export default {
 
   /**
    * 统一抛出异常
-   * @param code
+   * @param status
    * @param message
    */
-  throwFormat(code = 500, message = '服务端异常') {
-    throw new Error({ code, message });
+  throwFormat(status = 500, message = '服务端异常') {
+    throw new Error({ status, message });
+    // throw new Error({ status, message });
   }
 };

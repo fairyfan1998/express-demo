@@ -1,7 +1,7 @@
 import expressSwaggerGenerator from 'express-swagger-generator';
 import globalConfig from '../../../global-config';
-import { getApiSwaggerJSONPath, getApiSwaggerPath, getServiceStartPath } from '../utils/data-transform';
 import logger from '../utils/logger';
+import dataTransform from '../utils/data-transform';
 
 /**
  * 配置 swagger-jsdoc
@@ -13,7 +13,7 @@ const swaggerOptions = {
       title: 'Swagger - express-demo',
       version: '1.0.0'
     },
-    host: getServiceStartPath(),
+    host: dataTransform.getServiceStartPath(),
     basePath: '/',
     produces: ['application/json', 'application/xml'],
     schemes: ['http', 'https'],
@@ -37,6 +37,10 @@ const swaggerOptions = {
 export default (app) => {
   console.log(swaggerOptions);
   expressSwaggerGenerator(app)(swaggerOptions);
-  logger.info(`api swagger docs listening at: ${getApiSwaggerPath()}`);
-  logger.info(`api swagger json data at: ${getApiSwaggerJSONPath()}`);
+  logger.info(
+    `api swagger docs listening at: ${dataTransform.getApiSwaggerPath()}`
+  );
+  logger.info(
+    `api swagger json data at: ${dataTransform.getApiSwaggerJSONPath()}`
+  );
 };

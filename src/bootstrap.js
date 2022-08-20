@@ -10,20 +10,23 @@ import express from 'express';
 import globalConfig from '../global-config';
 import router from './router';
 import apiSwaggerDoc from './common/api-swagger-doc';
-import { getServiceStartPath } from './common/utils/data-transform';
 import logger from './common/utils/logger';
+import dataTransform from './common/utils/data-transform';
+import errorHandler from './middleware/error-handler';
 
 const app = express();
 const { port, hostname } = globalConfig;
 export default function () {
   console.log(globalConfig);
-
-  // 中间件使用
-  // app.use(loggerHandler);
   router(app, express.Router());
+  /* --------------------统一错误处理---------------*/
+  app.use(errorHandler);
+
   apiSwaggerDoc(app);
 
   app.listen(port, hostname, () => {
-    logger.info(`express-demo started at: ${getServiceStartPath()}`);
+    logger.info(
+      `express-demo started at: ${dataTransform.getServiceStartPath()}`
+    );
   });
 }

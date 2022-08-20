@@ -1,25 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e4d15bae-3cdc-45a4-a700-ce36794c11ac" name="变更" comment="fix: idea setting recover">
-      <change afterPath="$PROJECT_DIR$/src/common/validate-data/Readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/common/validate-data/index.js" afterDir="false" />
+    <list default="true" id="e4d15bae-3cdc-45a4-a700-ce36794c11ac" name="变更" comment="feat: 优化模块封装，新增部分文档">
+      <change afterPath="$PROJECT_DIR$/src/common/utils/constant-data.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/swagger相关.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/swagger相关.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/global-config/default.env.js" beforeDir="false" afterPath="$PROJECT_DIR$/global-config/default.env.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/bootstrap.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/common/api-swagger-doc/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/api-swagger-doc/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/common/utils/data-response.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/utils/data-response.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/common/utils/data-transform.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/utils/data-transform.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/utils/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/utils/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/utils/logger.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/utils/logger.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/health.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/health.controller.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/user.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/user.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/sequelize.factory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/sequelize.factory.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router/health.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/health.router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/base.entity.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/base.entity.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/user.entity.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/user.entity.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/middleware/error-handler.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware/error-handler.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/middleware/logger-handler.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware/logger-handler.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/router/user.router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/user.router.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -104,6 +98,14 @@
       <workItem from="1660878651593" duration="104000" />
       <workItem from="1660878815086" duration="12133000" />
     </task>
+    <task id="LOCAL-00001" summary="feat: 优化模块封装，新增部分文档">
+      <created>1660985481649</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1660985481649</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,6 +132,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: 优化模块封装，新增部分文档" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 优化模块封装，新增部分文档" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
