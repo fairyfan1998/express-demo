@@ -9,6 +9,7 @@
     "file-stream-rotator": "^0.6.1",
     "fs": "^0.0.1-security",
     "ioredis": "^5.2.2",
+    "joi": "^17.6.0",
     "morgan": "^1.10.0",
     "mysql2": "^2.3.3",
     "sequelize": "^6.21.3"
@@ -25,7 +26,7 @@
     "prettier": "^2.7.1"
   },
   "scripts": {
-    "dev": "NODE_ENV=development nodemon src/index.js --exec babel-node",
+    "dev": "NODE_ENV=development nodemon -L src/index.js --exec babel-node",
     "build": "rm -rf dist && babel src -d dist",
     "database-init": "node src/database/index.js",
     "pm2-test": "pm2 start pm2.config.json --only=express-demo-test",

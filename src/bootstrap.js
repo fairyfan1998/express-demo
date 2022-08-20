@@ -1,8 +1,3 @@
-import express from 'express';
-import globalConfig from '../global-config';
-import { logger } from './common/utils';
-import router from './router';
-import apiSwaggerDoc from './common/api-swagger-doc';
 /*
  * @Description: 项目启动入口
  * @Version: Beata1.0
@@ -11,19 +6,24 @@ import apiSwaggerDoc from './common/api-swagger-doc';
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
  * @LastEditTime: 2020-09-15 23:38:15
  */
+import express from 'express';
+import globalConfig from '../global-config';
+import router from './router';
+import apiSwaggerDoc from './common/api-swagger-doc';
+import { getServiceStartPath } from './common/utils/data-transform';
+import logger from './common/utils/logger';
 
+const app = express();
+const { port, hostname } = globalConfig;
 export default function () {
-  const app = express();
-  // 中间件使用
-  // app.use(loggerHandler);
-  router(app);
-  apiSwaggerDoc(app);
   console.log(globalConfig);
 
-  app.listen(globalConfig.port, globalConfig.hostname, () => {
-    logger.info(
-      `express-demo started at : http://${globalConfig.hostname}:${globalConfig.port}
-            `
-    );
+  // 中间件使用
+  // app.use(loggerHandler);
+  router(app, express.Router());
+  apiSwaggerDoc(app);
+
+  app.listen(port, hostname, () => {
+    logger.info(`express-demo started at: ${getServiceStartPath()}`);
   });
 }

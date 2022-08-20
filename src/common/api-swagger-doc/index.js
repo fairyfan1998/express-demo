@@ -1,5 +1,7 @@
 import expressSwaggerGenerator from 'express-swagger-generator';
 import globalConfig from '../../../global-config';
+import { getApiSwaggerJSONPath, getApiSwaggerPath, getServiceStartPath } from '../utils/data-transform';
+import logger from '../utils/logger';
 
 /**
  * 配置 swagger-jsdoc
@@ -11,7 +13,7 @@ const swaggerOptions = {
       title: 'Swagger - express-demo',
       version: '1.0.0'
     },
-    host: `http://${globalConfig.hostname}:${globalConfig.port}`,
+    host: getServiceStartPath(),
     basePath: '/',
     produces: ['application/json', 'application/xml'],
     schemes: ['http', 'https'],
@@ -25,11 +27,16 @@ const swaggerOptions = {
     }
   },
   route: {
-    url: '/doc',
-    docs: '/api-swagger.json' // swagger文件 api
+    url: globalConfig.swagger.apiDocRouter,
+    docs: globalConfig.swagger.apiDocJSONRouter // swagger文件 api
   },
   basedir: __dirname, // app absolute path
   files: ['../../controller/*.js'] // Path to the API handle folder
 };
 
-export default (app) => expressSwaggerGenerator(app)(swaggerOptions);
+export default (app) => {
+  console.log(swaggerOptions);
+  expressSwaggerGenerator(app)(swaggerOptions);
+  logger.info(`api swagger docs listening at: ${getApiSwaggerPath()}`);
+  logger.info(`api swagger json data at: ${getApiSwaggerJSONPath()}`);
+};

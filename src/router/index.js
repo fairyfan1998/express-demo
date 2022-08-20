@@ -8,10 +8,11 @@
  */
 // 参考：https://www.codenong.com/14934452/
 
-// eslint-disable-next-line import/no-extraneous-dependencies
 import userRouter from './user.router';
+import healthRouter from './health.router';
 
-export default function (app) {
-  app.use('/user', userRouter);
-  // expressListRoutes(userRouter, { prefix: '/user' });
+export default function (app, router) {
+  // 路由
+  app.use('/api/v1', userRouter(router));
+  app.use('/api/v1', healthRouter(router));
 }
