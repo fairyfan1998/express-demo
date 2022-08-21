@@ -26,3 +26,5 @@
 - express-jsdoc-swagger
 
 无意间找到的，感觉还不错 参考链接：https://www.npmjs.com/package/express-jsdoc-swagger
+
+使用文档：https://brikev.github.io/express-jsdoc-swagger-docs/#/tags

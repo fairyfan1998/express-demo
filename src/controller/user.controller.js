@@ -5,14 +5,33 @@ const userService = new UserService(database.userEntityRepo);
 
 export default {
   /**
-   * 创建用户
-   * @route post /api/v1/user
+   * CreateUser
+   * @typedef {object} CreateUser
+   * @property {string} username.required - 用户名
+   * @property {string} password - 用户密码
+   */
+  /**
+   * post /api/v1/user
    * @summary 创建用户
-   * @group user - 用户相关
-   * @param {string} email.params.required - username or email - eg: user@domain
-   * @param {string} password.body.required - user's password.
-   * @returns {object} 200 - An array of user info
-   * @returns {Error}  default - Unexpected error
+   * @tags 用户相关
+   * @param {CreateUser} request.body.required - username or email -  application/json
+   * @returns {object} 200 - 请求成功
+   * @example request - 测试
+   * {
+   *   "username": "Bury The Light",
+   *   "password": "Casey Edwards ft. Victor Borba",
+   * }
+   * @example response - 200 -  请求成功
+   * {
+   *   "code": 200,
+   *   "message": "You have added a song!",
+   *   "result":true
+   * }
+   * @example response - 200 - 请求失败
+   * {
+   *   "message": "Failed to save song because you did not specify a title",
+   *   "errCode": "EV121"
+   * }
    */
   createUser(req, res) {
     const user = req.body;
@@ -24,9 +43,8 @@ export default {
   },
 
   /**
-   * 1213212
-   * @route GET /user/test
-   * @group user - Operations about user
+   * GET /user/test
+   * @tags 用户相关
    * @operationId abc - 我是operationId
    * @summary 测试
    * @param {string} email.query.required - username or email - eg: user@domain
