@@ -3,6 +3,7 @@
  * @param date
  */
 import globalConfig from '../../../global-config';
+import logger from './logger';
 
 export default {
   formatDateTime(date) {
@@ -28,5 +29,13 @@ export default {
   },
   getApiSwaggerJSONPath() {
     return `http://${globalConfig.hostname}:${globalConfig.port}${globalConfig.swagger.apiDocJSONRouter}`;
+  },
+
+  printRegisteredRouter(routerList) {
+    routerList.forEach(({ path, methods, middlewares }) => {
+      methods.forEach((method) => {
+        logger.info(`${method} ${path}`);
+      });
+    });
   }
 };

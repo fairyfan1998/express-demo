@@ -14,8 +14,11 @@ import logger from './common/utils/logger';
 import dataTransform from './common/utils/data-transform';
 import errorHandler from './middleware/error-handler';
 
+const expressListEndpoints = require('express-list-endpoints');
+
 const app = express();
 const { port, hostname } = globalConfig;
+
 export default function () {
   console.log(globalConfig);
   router(app, express.Router());
@@ -29,4 +32,7 @@ export default function () {
       `express-demo started at: ${dataTransform.getServiceStartPath()}`
     );
   });
+
+  // 输出路由日志
+  dataTransform.printRegisteredRouter(expressListEndpoints(app));
 }
