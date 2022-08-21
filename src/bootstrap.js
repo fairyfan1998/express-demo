@@ -9,10 +9,10 @@
 import express from 'express';
 import globalConfig from '../global-config';
 import router from './router';
-import apiSwaggerDoc from './common/api-swagger-doc';
 import logger from './common/utils/logger';
 import dataTransform from './common/utils/data-transform';
 import errorHandler from './middleware/error-handler';
+import apiSwaggerDoc from './common/api-swagger-doc';
 
 const expressListEndpoints = require('express-list-endpoints');
 
@@ -24,7 +24,6 @@ export default function () {
   router(app, express.Router());
   /* --------------------统一错误处理---------------*/
   app.use(errorHandler);
-
   apiSwaggerDoc(app);
 
   app.listen(port, hostname, () => {

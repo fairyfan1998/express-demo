@@ -15,7 +15,7 @@ export default class {
    */
   getSingleInstance() {
     const { options } = this;
-    if (this[redisInstance] === null) {
+    if (this[redisInstance] == null) {
       this[redisInstance] = new Redis(options);
     }
     return this[redisInstance];

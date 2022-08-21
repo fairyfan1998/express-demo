@@ -14,11 +14,7 @@
 import bootstrap from './bootstrap';
 import database from './database';
 
-/** -----------------------------redis end------------------------------ */
-
-/** -----------------------------redis end------------------------------ */
-
-/** -----------------------------database end------------------------------ */
+/** -----------------------------database start------------------------------ */
 database.sequelizeInstance.sync({
   alter: true, // 数据库表按照模型调整；
   force: false // 数据库表是否强制删除后重建

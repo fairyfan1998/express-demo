@@ -8,6 +8,7 @@ specifiers:
   eslint-config-airbnb-base: ^15.0.0
   eslint-plugin-import: ^2.26.0
   express: ^4.17.1
+  express-jsdoc-swagger: ^1.8.0
   express-list-endpoints: ^6.0.0
   express-list-routes: ^1.1.3
   express-swagger-generator: ^1.1.17
@@ -23,6 +24,7 @@ specifiers:
 
 dependencies:
   express: 4.18.1
+  express-jsdoc-swagger: 1.8.0
   express-list-endpoints: 6.0.0
   express-swagger-generator: 1.1.17
   file-stream-rotator: 0.6.1
@@ -208,7 +210,6 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       color-convert: 2.0.1
-    dev: true
 
   /anymatch/1.3.2:
     resolution: {integrity: sha512-0XNayC8lTHQ2OI8aljNCN3sSx6hsr/1+rlcDAotXJR7C1oZZHCNsfpbKwMjRA3Uqb5tF1Rae2oloTr4xpq+WjA==}
@@ -1119,7 +1120,6 @@ packages:
     dependencies:
       ansi-styles: 4.3.0
       supports-color: 7.2.0
-    dev: true
 
   /chokidar/1.7.0:
     resolution: {integrity: sha512-mk8fAWcRUOxY7btlLtitj3A45jOwSAxH4tOFOoEGbVsl6cL6pPMWUy7dwZ/canfj3QEdP6FHSnf/l1c6/WkzVg==}
@@ -1186,11 +1186,9 @@ packages:
     engines: {node: '>=7.0.0'}
     dependencies:
       color-name: 1.1.4
-    dev: true
 
   /color-name/1.1.4:
     resolution: {integrity: sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==}
-    dev: true
 
   /commander/2.20.3:
     resolution: {integrity: sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==}
@@ -1391,7 +1389,6 @@ packages:
     engines: {node: '>=6.0.0'}
     dependencies:
       esutils: 2.0.3
-    dev: true
 
   /dottie/2.0.2:
     resolution: {integrity: sha512-fmrwR04lsniq/uSr8yikThDTrM7epXHBAAjH9TbeH3rEA8tdCO7mRzB9hdmdGyJCxF8KERo9CITcm3kGuoyMhg==}
@@ -1696,6 +1693,20 @@ packages:
       fill-range: 2.2.4
     dev: true
     optional: true
+
+  /express-jsdoc-swagger/1.8.0:
+    resolution: {integrity: sha512-1Ij+2tSRldJzduxi56Dm3zS87UKQl83VXanhy7GPmXHxChCxafPcbf0SCJTIu+NdO0kq0seSPE1fQdwaEq+Vrg==}
+    engines: {node: '>= 10.0.0'}
+    dependencies:
+      chalk: 4.1.2
+      doctrine: 3.0.0
+      express: 4.18.1
+      glob: 7.2.3
+      merge: 2.1.1
+      swagger-ui-express: 4.5.0_express@4.18.1
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
 
   /express-list-endpoints/6.0.0:
     resolution: {integrity: sha512-1I30bSVego+AU/eSsX/bV2xrOXW5tFhsuXZp7wZd9396bAAxH7KHaAwLXQYra0Aw33xA67HmNiceGf2SOvXaLg==}
@@ -2132,7 +2143,6 @@ packages:
   /has-flag/4.0.0:
     resolution: {integrity: sha512-EykJT/Q1KjTWctppgIAgfSO0tKVuZUjhgMr17kqTumMl6Afv3EISleU7qZUzoXDFTAHTDC4NOoG/ZxU3EvlMPQ==}
     engines: {node: '>=8'}
-    dev: true
 
   /has-property-descriptors/1.0.0:
     resolution: {integrity: sha512-62DVLZGoiEBDHQyqG4w9xCuZ7eJEwNmJRWw2VY84Oedb7WFcA27fiEVe8oUQx9hAUJ4ekurquucTGwsyO1XGdQ==}
@@ -2786,6 +2796,10 @@ packages:
 
   /merge-descriptors/1.0.1:
     resolution: {integrity: sha512-cCi6g3/Zr1iqQi6ySbseM1Xvooa98N0w31jzUYrXPX2xqObmFGHJ0tQ5u74H3mVh7wLouTseZyYIq39g8cNp1w==}
+    dev: false
+
+  /merge/2.1.1:
+    resolution: {integrity: sha512-jz+Cfrg9GWOZbQAnDQ4hlVnQky+341Yk5ru8bZSe6sIDTCIg8n9i/u7hSQGSVOF3C7lH6mGtqjkiT9G4wFLL0w==}
     dev: false
 
   /merge2/1.4.1:
@@ -3867,7 +3881,6 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       has-flag: 4.0.0
-    dev: true
 
   /supports-preserve-symlinks-flag/1.0.0:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
@@ -3895,6 +3908,20 @@ packages:
 
   /swagger-schema-official/2.0.0-bab6bed:
     resolution: {integrity: sha512-rCC0NWGKr/IJhtRuPq/t37qvZHI/mH4I4sxflVM+qgVe5Z2uOCivzWaVbuioJaB61kvm5UvB7b49E+oBY0M8jA==}
+    dev: false
+
+  /swagger-ui-dist/4.14.0:
+    resolution: {integrity: sha512-TBzhheU15s+o54Cgk9qxuYcZMiqSm/SkvKnapoGHOF66kz0Y5aGjpzj5BT/vpBbn6rTPJ9tUYXQxuDWfsjiGMw==}
+    dev: false
+
+  /swagger-ui-express/4.5.0_express@4.18.1:
+    resolution: {integrity: sha512-DHk3zFvsxrkcnurGvQlAcLuTDacAVN1JHKDgcba/gr2NFRE4HGwP1YeHIXMiGznkWR4AeS7X5vEblNn4QljuNA==}
+    engines: {node: '>= v0.10.32'}
+    peerDependencies:
+      express: '>=4.0.0'
+    dependencies:
+      express: 4.18.1
+      swagger-ui-dist: 4.14.0
     dev: false
 
   /text-table/0.2.0:

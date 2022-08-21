@@ -16,11 +16,9 @@ export default {
    */
   createUser(req, res) {
     const user = req.body;
-    console.log(11);
     // await userService.create(user);
-    // res.json({ code: 1 });
+    res.json({ code: 1 });
     // res.send(111);
-    return { code: 1 };
     // res.send('<p>some html</p>');
     // throw new Error('23');
   },
@@ -41,11 +39,23 @@ export default {
     await userService.update(user);
   },
 
+  /**
+   * post /api/v1/user/delete
+   * @summary 用户删除-逻辑删除
+   * @tags 用户相关
+   * @return {object} 200 - success response
+   */
   async deleteUserById(req, res) {
     const { id } = req.body;
     await userService.destroyById(id);
   },
 
+  /**
+   * post /api/v1/user/destroy
+   * @summary 用户删除-物理删除
+   * @tags 用户相关
+   * @return {object} 200 - success response
+   */
   async destroyUserById(req, res) {
     const { id } = req.body;
     await userService.destroyById(id);

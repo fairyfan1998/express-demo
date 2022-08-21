@@ -4,5 +4,6 @@ import globalConfig from '../../../global-config';
 
 const redisInstance = new RedisFactory(globalConfig.redis).getSingleInstance();
 export default {
+  redisInstance,
   redisString: new RedisString(redisInstance)
 };
