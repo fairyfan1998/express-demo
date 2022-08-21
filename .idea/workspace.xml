@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e4d15bae-3cdc-45a4-a700-ce36794c11ac" name="变更" comment="feat: 优化swagger模块，增加doc">
+    <list default="true" id="e4d15bae-3cdc-45a4-a700-ce36794c11ac" name="变更" comment="feat: 新增doc">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/swagger相关.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/swagger相关.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/api-swagger-doc/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/api-swagger-doc/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/user.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/user.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/user.router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/user.router.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +120,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661089354733</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="feat: 新增doc">
+      <created>1661091975145</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1661091975145</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,7 +160,8 @@
     <MESSAGE value="feat: 新增user service逻辑" />
     <MESSAGE value="refactor: 优化日志，新增路由日志输出" />
     <MESSAGE value="feat: 优化swagger模块，增加doc" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: 优化swagger模块，增加doc" />
+    <MESSAGE value="feat: 新增doc" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 新增doc" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

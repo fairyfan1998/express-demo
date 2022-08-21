@@ -36,10 +36,17 @@ const swaggerOptions = {
 
 const options = {
   info: {
-    version: '1.0.0',
-    title: 'Albums store',
+    title: 'express-demo 接口文档',
+    description: 'express-demo 接口文档',
+    version: '0.0.1',
     license: {
-      name: 'MIT'
+      name: 'MIT',
+      url: 'https://www.apache.org/licenses/LICENSE-2.0.html'
+    },
+    contact: {
+      name: '联系作者',
+      url: 'https://github.com/142vip',
+      email: 'fairy_vip@2925.com'
     }
   },
   security: {
@@ -51,7 +58,7 @@ const options = {
   // Base directory which we use to locate your JSDOC files
   baseDir: __dirname,
   // Glob pattern to find your jsdoc files (multiple patterns can be added in an array)
-  filesPattern: '../../controller/*.js',
+  filesPattern: ['../../controller/*.js', './**/*.route.js'],
   // URL where SwaggerUI will be rendered
   swaggerUIPath: globalConfig.swagger.apiDocRouter,
   // Expose OpenAPI UI
