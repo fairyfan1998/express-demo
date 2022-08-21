@@ -1,8 +1,11 @@
-export default class DataTransform {
-  /**
-   * 格式化时间
-   * @param date
-   */
+/**
+ * 格式化时间
+ * @param date
+ */
+import globalConfig from '../../../global-config';
+import logger from './logger';
+
+export default {
   formatDateTime(date) {
     const currentTime = date == null ? new Date() : new Date(date);
     const y = currentTime.getFullYear();
@@ -17,5 +20,22 @@ export default class DataTransform {
     let second = currentTime.getSeconds();
     second = second < 10 ? `0${second}` : second;
     return `${y}-${m}-${d} ${h}:${minute}:${second}`;
+  },
+  getServiceStartPath() {
+    return `http://${globalConfig.hostname}:${globalConfig.port}`;
+  },
+  getApiSwaggerPath() {
+    return `http://${globalConfig.hostname}:${globalConfig.port}${globalConfig.swagger.apiDocRouter}`;
+  },
+  getApiSwaggerJSONPath() {
+    return `http://${globalConfig.hostname}:${globalConfig.port}${globalConfig.swagger.apiDocJSONRouter}`;
+  },
+
+  printRegisteredRouter(routerList) {
+    routerList.forEach(({ path, methods, middlewares }) => {
+      methods.forEach((method) => {
+        logger.info(`${method} ${path}`);
+      });
+    });
   }
-}
+};

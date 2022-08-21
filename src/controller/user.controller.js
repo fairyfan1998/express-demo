@@ -1,23 +1,76 @@
 import UserService from '../service/user.service';
 import database from '../database';
+import dataResponse from '../common/utils/data-response';
 
-export default class UserController {
-  constructor() {
-    this.userService = new UserService(database.userEntityRepo);
-  }
+const userService = new UserService(database.userEntityRepo);
+
+export default {
+  /**
+   * post /api/v1/user
+   * @summary 创建用户
+   * @tags 用户相关
+   * @param {object} request.body.required  -  application/json
+   * @returns {object} 200 - 请求成功
+   * @example request - 123
+   * {
+   *   "username": "Bury The Light",
+   *   "password": "Casey Edwards ft. Victor Borba"
+   * }
+   * @example response - 200 -  请求成功
+   * {
+   *   "code": 200,
+   *   "message": "You have added a song!",
+   *   "result":true
+   * }
+   * @example response - 200 - 请求失败
+   * {
+   *   "message": "Failed to save song because you did not specify a title",
+   *   "errCode": "EV121"
+   * }
+   */
+  createUser(req, res, next) {
+    const user = req.body;
+    // await userService.create(user);
+    res.json(dataResponse.returnFormat(true));
+    // res.send(111);
+    // res.send('<p>some html</p>');
+    // throw new Error('23');
+    next(dataResponse.returnFormat(true));
+  },
 
   /**
-   * This function comment is parsed by doctrine
-   * @route GET /user/test
-   * @group user - Operations about user
-   * @param {string} email.query.required - username or email - eg: user@domain
-   * @param {string} password.query.required - user's password.
-   * @returns {object} 200 - An array of user info
-   * @returns {Error}  default - Unexpected error
+   * post /api/v1/user/info
+   * @tags 用户相关
+   * @summary 更新用户信息
+   * @param {object} request.body.required - application/json
+   * @returns {object} 200 - 请求成功
    */
-  async test() {
-    console.log(this.userService);
-    const result = await this.userService.test();
-    return result;
+  async updateUser(req, res) {
+    const user = req.body;
+    await userService.update(user);
+  },
+
+  /**
+   * post /api/v1/user/delete
+   * @summary 用户删除-逻辑删除
+   * @tags 用户相关
+   * @param {object} request.body.required - application/json
+   * @returns {object} 200 - 请求成功
+   */
+  async deleteUserById(req, res) {
+    const { id } = req.body;
+    await userService.destroyById(id);
+  },
+
+  /**
+   * post /api/v1/user/destroy
+   * @summary 用户删除-物理删除
+   * @tags 用户相关
+   * @param {object} request.body.required - application/json
+   * @returns {object} 200 - 请求成功
+   */
+  async destroyUserById(req, res) {
+    const { id } = req.body;
+    await userService.destroyById(id);
   }
-}
+};

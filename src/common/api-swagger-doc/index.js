@@ -1,8 +1,10 @@
-import expressSwaggerGenerator from 'express-swagger-generator';
+import expressJSDocSwagger from 'express-jsdoc-swagger';
 import globalConfig from '../../../global-config';
+import logger from '../utils/logger';
+import dataTransform from '../utils/data-transform';
 
 /**
- * swagger配置
+ * 配置 swagger-jsdoc
  */
 const swaggerOptions = {
   swaggerDefinition: {
@@ -11,7 +13,7 @@ const swaggerOptions = {
       title: 'Swagger - express-demo',
       version: '1.0.0'
     },
-    host: `http://${globalConfig.hostname}:${globalConfig.port}`,
+    host: dataTransform.getServiceStartPath(),
     basePath: '/',
     produces: ['application/json', 'application/xml'],
     schemes: ['http', 'https'],
@@ -25,13 +27,64 @@ const swaggerOptions = {
     }
   },
   route: {
-    url: '/doc',
-    docs: '/api-swagger.json' // swagger文件 api
+    url: globalConfig.swagger.apiDocRouter,
+    docs: globalConfig.swagger.apiDocJSONRouter // swagger文件 api
   },
   basedir: __dirname, // app absolute path
-  files: ['src/controller/**/*.js'] // Path to the API handle folder
+  files: ['../../controller/*.js'] // Path to the API handle folder
 };
 
-export default function (app) {
-  expressSwaggerGenerator(app)(swaggerOptions);
-}
+const options = {
+  info: {
+    title: 'express-demo 接口文档',
+    description: 'express-demo 接口文档',
+    version: '0.0.1',
+    license: {
+      name: 'MIT',
+      url: 'https://www.apache.org/licenses/LICENSE-2.0.html'
+    },
+    contact: {
+      name: '联系作者',
+      url: 'https://github.com/142vip',
+      email: 'fairy_vip@2925.com'
+    }
+  },
+  security: {
+    BasicAuth: {
+      type: 'http',
+      scheme: 'basic'
+    }
+  },
+  // Base directory which we use to locate your JSDOC files
+  baseDir: __dirname,
+  // Glob pattern to find your jsdoc files (multiple patterns can be added in an array)
+  filesPattern: ['../../controller/*.js', './**/*.route.js'],
+  // URL where SwaggerUI will be rendered
+  swaggerUIPath: globalConfig.swagger.apiDocRouter,
+  // Expose OpenAPI UI
+  exposeSwaggerUI: true,
+  // Expose Open API JSON Docs documentation in `apiDocsPath` path.
+  exposeApiDocs: true,
+  // Open API JSON Docs endpoint.
+  apiDocsPath: globalConfig.swagger.apiDocJSONRouter,
+  // Set non-required fields as nullable by default
+  notRequiredAsNullable: false,
+  // You can customize your UI options.
+  // you can extend swagger-ui-express config. You can checkout an example of this
+  // in the `example/configuration/swaggerOptions.js`
+  swaggerUiOptions: {},
+  // multiple option in case you want more that one instance
+  multiple: true
+};
+
+export default (app) => {
+  console.log(swaggerOptions);
+  expressJSDocSwagger(app)(options);
+  // expressSwaggerGenerator(app)(swaggerOptions);
+  logger.info(
+    `api swagger docs listening at: ${dataTransform.getApiSwaggerPath()}`
+  );
+  logger.info(
+    `api swagger json data at: ${dataTransform.getApiSwaggerJSONPath()}`
+  );
+};
