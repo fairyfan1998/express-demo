@@ -31,6 +31,9 @@ export default {
     return `http://${globalConfig.hostname}:${globalConfig.port}${globalConfig.swagger.apiDocJSONRouter}`;
   },
 
+  /**
+   * 打印路由
+   */
   printRegisteredRouter(routerList) {
     routerList.forEach(({ path, methods, middlewares }) => {
       methods.forEach((method) => {

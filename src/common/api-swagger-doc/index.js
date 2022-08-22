@@ -30,8 +30,8 @@ const swaggerOptions = {
   },
   // Base directory which we use to locate your JSDOC files
   baseDir: __dirname,
-  // Glob pattern to find your jsdoc files (multiple patterns can be added in an array)
-  filesPattern: ['../../controller/*.js', './**/*.route.js'],
+  // 需要扫描的文件
+  filesPattern: ['../../controller/*.js', '../../router/*.router.js'],
   // URL where SwaggerUI will be rendered
   swaggerUIPath: globalConfig.swagger.apiDocRouter,
   // Expose OpenAPI UI

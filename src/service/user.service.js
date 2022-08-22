@@ -7,4 +7,13 @@ export default class UserService extends BaseService {
   async test() {
     return this.modelEntity.findAll();
   }
+
+  async findOneByUserName(username) {
+    return this.modelEntity.findOne({
+      raw: true,
+      where: {
+        username
+      }
+    });
+  }
 }

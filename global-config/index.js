@@ -5,7 +5,8 @@
 import defaultEnv from './default.env';
 import prodEnv from './prod.env';
 
-// import testEnv from "./test.env";
+import testEnv from './test.env';
+
 function getStartConfig(nodeEnv) {
   if (nodeEnv === 'development') {
     return defaultEnv;
@@ -14,7 +15,7 @@ function getStartConfig(nodeEnv) {
     return prodEnv;
   }
   if (nodeEnv === 'test') {
-    // return testEnv;
+    return testEnv;
   }
   return defaultEnv;
 }

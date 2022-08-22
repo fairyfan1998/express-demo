@@ -7,7 +7,7 @@
   "verbose": true,
   "watch": [
     "src/*",
-    "config/*"
+    "global-config/*"
   ],
   "stdin": true,
   "env": {
