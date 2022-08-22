@@ -9,6 +9,7 @@ import dataResponse from '../common/utils/data-response';
  */
 export default function (error, req, res, next) {
   console.log(1212, 'error-handle--start');
+  console.log(error);
   if (error != null) {
     const { status, message } = error;
     res.send(dataResponse.returnFormat(false, message, status));

@@ -3,14 +3,14 @@ import dataResponse from '../utils/data-response';
 
 /**
  * 参数校验
- * @param data 需要校验的参数规则
- * @param content body|query|params
+ * @param schemaRule 需要校验的参数规则
+ * @param data req.body|req.query|req.params
  */
-export default function (data = {}, content = 'body') {
-  const schema = joi.object(data);
+export default function (schemaRule = {}, key = 'body') {
   return async function (req, res, next) {
     try {
-      await schema.validateAsync(req[content], data);
+      const schema = joi.object(schemaRule);
+      await schema.validateAsync(req[key], schemaRule);
       next();
     }
     catch (error) {

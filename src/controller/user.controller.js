@@ -13,23 +13,18 @@ export default {
    * @returns {object} 200 - 请求成功
    * @example request - 123
    * {
-   *   "username": "Bury The Light",
-   *   "password": "Casey Edwards ft. Victor Borba"
+   *   "username": "fairy",
+   *   "password": "123456"
    * }
    * @example response - 200 -  请求成功
    * {
    *   "code": 200,
-   *   "message": "You have added a song!",
+   *   "message": "请求成功",
    *   "result":true
-   * }
-   * @example response - 200 - 请求失败
-   * {
-   *   "message": "Failed to save song because you did not specify a title",
-   *   "errCode": "EV121"
    * }
    */
   createUser(req, res) {
-    const user = req.body;
+    console.log(req.body, req.body);
     // await userService.create(user);
     // res.json(dataResponse.returnFormat(true));
     // res.send(111);
