@@ -1,4 +1,4 @@
-import { loggerColor, loggerProjectName } from './constant-data';
+import { loggerColor, loggerProjectName } from './constants';
 
 /**
  * 日志封装

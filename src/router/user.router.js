@@ -14,8 +14,8 @@ export default (userRouter) => {
    * @returns {object} 200 - 请求成功
    * @example request - 请求数据Mock
    * {
-   *   "username": "fairy",
-   *   "password": "123456"
+   *   "username": "142vip",
+   *   "password": "654321"
    * }
    * @example response - 200 -  请求成功
    * {
@@ -98,5 +98,38 @@ export default (userRouter) => {
     validateData(userRule.destroyUserRule, validateType.POST),
     userController.deleteUserById
   );
+
+  /**
+   * get /api/v1/user/list
+   * @tags 用户相关
+   * @summary 获取用户列表
+   * @returns {object} 200 - 请求成功
+   * @example response - 200 -  请求成功
+   * {
+   *   "code": 200,
+   *   "message": "请求成功",
+   *   "result":[]
+   * }
+   */
+  userRouter.get('/user/list', userController.findAllUser);
+  /**
+   * get /api/v1/user/:id
+   * @tags 用户相关
+   * @summary 获取单个用户信息
+   * @param {string} id.query.required - 用户id
+   * @param {number} id.path - 用户id
+   * @returns {object} 200 - 请求成功
+   * @example request - 请求数据Mock
+   * {
+   *   "id": 4,
+   * }
+   * @example response - 200 -  请求成功
+   * {
+   *   "code": 200,
+   *   "message": "请求成功",
+   *   "result":{}
+   * }
+   */
+  userRouter.get('/user/:id', userController.findOneById);
   return userRouter;
 };

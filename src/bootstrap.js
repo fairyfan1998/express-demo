@@ -6,8 +6,9 @@ import logger from './common/utils/logger';
 import dataTransform from './common/utils/data-transform';
 import errorHandler from './middleware/error-handler';
 import apiSwaggerDoc from './common/api-swagger-doc';
-import { responseHeader } from './common/utils/constant-data';
+import { MaxResponseTimeOut, responseHeader } from './common/utils/constants';
 import loggerHandler from './middleware/logger-handler';
+import dataResponse from './common/utils/data-response';
 
 /*
  * @Description: 项目启动入口
@@ -24,6 +25,13 @@ const { port, hostname } = globalConfig;
 
 export default function () {
   console.log(globalConfig);
+
+  // 路由请求超时的中间件
+  app.use((req, res, next) => {
+    // 这里必须是Response响应的定时器【10秒】
+    res.setTimeout(MaxResponseTimeOut, () => res.json(dataResponse.returnFormat(false, '请求超时，服务端异常')));
+    next();
+  });
 
   app.use(loggerHandler);
 

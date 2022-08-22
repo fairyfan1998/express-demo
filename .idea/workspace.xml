@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e4d15bae-3cdc-45a4-a700-ce36794c11ac" name="变更" comment="feat: user 参数校验模板，优化中间件处理">
+    <list default="true" id="e4d15bae-3cdc-45a4-a700-ce36794c11ac" name="变更" comment="feat：添加参数校验模板，新增user数据库操作service">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/global-config/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/global-config/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nodemon.json" beforeDir="false" afterPath="$PROJECT_DIR$/nodemon.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/api-swagger-doc/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/api-swagger-doc/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/utils/constant-data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/utils/constants.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/common/utils/data-transform.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/utils/data-transform.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/validate-data/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/validate-data/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/validate-data/user.rule.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/validate-data/user.rule.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/utils/logger.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/utils/logger.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/user.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/user.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/router/user.router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/user.router.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/service/user.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/user.service.js" afterDir="false" />
     </list>
@@ -145,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661177103810</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="feat：添加参数校验模板，新增user数据库操作service">
+      <created>1661178867633</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1661178867633</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,7 +189,8 @@
     <MESSAGE value="feat: 新增doc" />
     <MESSAGE value="refactor: swagger 配置优化" />
     <MESSAGE value="feat: user 参数校验模板，优化中间件处理" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: user 参数校验模板，优化中间件处理" />
+    <MESSAGE value="feat：添加参数校验模板，新增user数据库操作service" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat：添加参数校验模板，新增user数据库操作service" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

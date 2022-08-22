@@ -2,8 +2,12 @@
  * 常量
  */
 export const accessTokenSecret = 'fairy sister so cute';
-export const md5Secret = '--oauth-client-service--';
+export const md5Secret = '--express-demo--';
 export const cookieSecret = 'express_demo_19980115_19970118_520';
+// 致敬姐姐
+export const randomStrLetterKey = 'FLOURISH';
+// 接口最大超时时间  默认10s
+export const MaxResponseTimeOut = 10000;
 export const userAgentList = [
   'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.8.0.12) Gecko/20070731 Ubuntu/dapper-security Firefox/1.5.0.12',
   'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0; Acoo Browser; SLCC1; .NET CLR 2.0.50727; Media Center PC 5.0; .NET CLR 3.0.04506)',

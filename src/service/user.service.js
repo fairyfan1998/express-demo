@@ -16,4 +16,10 @@ export default class UserService extends BaseService {
       }
     });
   }
+
+  async findAllUser() {
+    return this.modelEntity.findAll({
+      raw: true
+    });
+  }
 }

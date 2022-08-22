@@ -21,4 +21,6 @@ database.sequelizeInstance.sync({
 });
 /** -----------------------------database end------------------------------ */
 
+// todo： 处理全局未通过中间件捕获的异常
+
 bootstrap();
