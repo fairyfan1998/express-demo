@@ -9,7 +9,6 @@
     "express-jsdoc-swagger": "^1.8.0",
     "express-list-endpoints": "^6.0.0",
     "express-response-errors": "^1.0.5",
-    "express-swagger-generator": "^1.1.17",
     "file-stream-rotator": "^0.6.1",
     "fs": "^0.0.1-security",
     "ioredis": "^5.2.2",
