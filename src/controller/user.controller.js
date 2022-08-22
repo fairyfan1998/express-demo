@@ -30,7 +30,7 @@ export default {
   },
 
   async findOneById(req, res) {
-    const id = req.body;
+    const { id } = req.params;
     const user = await userService.findOneById(id);
     res.json(dataResponse.returnFormat(user == null ? {} : user, '获取用户'));
   },

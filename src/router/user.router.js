@@ -113,15 +113,14 @@ export default (userRouter) => {
    */
   userRouter.get('/user/list', userController.findAllUser);
   /**
-   * get /api/v1/user/:id
+   * get /api/v1/user/{id}
    * @tags 用户相关
    * @summary 获取单个用户信息
-   * @param {string} id.query.required - 用户id
-   * @param {number} id.path - 用户id
+   * @param {number} id.path - 用户id  例如：4
    * @returns {object} 200 - 请求成功
    * @example request - 请求数据Mock
    * {
-   *   "id": 4,
+   *   "id": 4
    * }
    * @example response - 200 -  请求成功
    * {
