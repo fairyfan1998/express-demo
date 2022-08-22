@@ -28,14 +28,13 @@ export default {
    *   "errCode": "EV121"
    * }
    */
-  createUser(req, res, next) {
+  createUser(req, res) {
     const user = req.body;
     // await userService.create(user);
-    res.json(dataResponse.returnFormat(true));
+    // res.json(dataResponse.returnFormat(true));
     // res.send(111);
     // res.send('<p>some html</p>');
-    // throw new Error('23');
-    next(dataResponse.returnFormat(true));
+    dataResponse.throwFormat(500, '测试');
   },
 
   /**

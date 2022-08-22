@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e4d15bae-3cdc-45a4-a700-ce36794c11ac" name="变更" comment="feat: 新增doc">
+    <list default="true" id="e4d15bae-3cdc-45a4-a700-ce36794c11ac" name="变更" comment="feat: swagger接口注解优化">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/api-swagger-doc/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/api-swagger-doc/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/utils/data-response.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/utils/data-response.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/user.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/user.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router/user.router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/user.router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/middleware/error-handler.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware/error-handler.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/middleware/logger-handler.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware/logger-handler.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +22,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="next" />
+        <entry key="$PROJECT_DIR$" value="feat/swagger" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -91,6 +92,7 @@
       <updated>1660878647789</updated>
       <workItem from="1660878651593" duration="104000" />
       <workItem from="1660878815086" duration="12133000" />
+      <workItem from="1661161606854" duration="3294000" />
     </task>
     <task id="LOCAL-00001" summary="feat: 优化模块封装，新增部分文档">
       <created>1660985481649</created>

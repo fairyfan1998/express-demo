@@ -1,35 +1,39 @@
 import morgan from 'morgan';
 import FileStreamRotator from 'file-stream-rotator';
 import path from 'path';
-import * as fs from 'fs';
-import dataTransform from '../common/utils/data-transform';
+import fs from 'fs';
 import logger from '../common/utils/logger';
+import dataTransform from '../common/utils/data-transform';
 
-const logDirectory = path.join(__dirname, 'run-logger');
+const logDirectory = path.join(__dirname, '../', 'logger');
 
-fs.existsSync(logDirectory) || fs.mkdirSync(logDirectory);
-const accessLogStream = FileStreamRotator.getStream({
-  date_format: 'YYYYMMDD',
-  filename: path.join(logDirectory, 'access-%DATE%.log'),
-  frequency: 'daily',
-  verbose: false
-});
-
-function formatLogger(tokens, req, res) {
-  const requestInfo = [
-    dataTransform.formatDateTime(),
-    tokens.method(req, res),
-    tokens.url(req, res),
-    tokens.status(req, res),
-    'body参数:',
-    JSON.stringify(req.body)
-  ].join(' ');
-  logger.info(requestInfo);
-  return requestInfo;
+// 日志目录初始化
+if (!fs.existsSync(logDirectory)) {
+  fs.mkdirSync(logDirectory);
 }
+export default morgan(
+  (tokens, req, res) => {
+    const requestInfo = [
+      dataTransform.formatDateTime(),
+      tokens.method(req, res),
+      tokens.url(req, res),
+      tokens.status(req, res),
+      'body:',
+      JSON.stringify(req.body),
+      '-',
+      tokens['response-time'](req, res),
+      'ms'
+    ].join(' ');
 
-export default {
-  morgan: morgan(formatLogger, {
-    stream: accessLogStream
-  })
-};
+    logger.info(requestInfo);
+    return requestInfo;
+  },
+  {
+    stream: FileStreamRotator.getStream({
+      date_format: 'YYYY-MM-DD',
+      filename: path.join(logDirectory, '%DATE%.log'),
+      frequency: 'daily',
+      verbose: false
+    })
+  }
+);

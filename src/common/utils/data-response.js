@@ -1,3 +1,5 @@
+import { HttpError } from 'express-response-errors';
+
 export default {
   /**
    * 统一参数返回
@@ -15,7 +17,6 @@ export default {
    * @param message
    */
   throwFormat(status = 500, message = '服务端异常') {
-    throw new Error({ status, message });
-    // throw new Error({ status, message });
+    throw new HttpError(status, message);
   }
 };
