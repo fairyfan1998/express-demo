@@ -7,9 +7,11 @@
  * @LastEditTime: 2020-09-15 00:04:07
  */
 
-/**
- * 项目路由的健康检查
- * @param req 请求对象
- * @param res 请求响应对象
- * @param next 方法，中间件链式调用时使用
- */
+import dataResponse from '../common/utils/data-response';
+
+export default {
+
+  async checkMysql(req, res) {
+    res.send(dataResponse.returnFormat());
+  }
+};

@@ -1,11 +1,15 @@
 import express from 'express';
-import swaggerUi from 'swagger-ui-express';
-import swaggerJSDoc from 'swagger-jsdoc';
-import path from 'path';
+import bodyParser from 'body-parser';
 import globalConfig from '../global-config';
-import { logger } from './common/utils';
 import router from './router';
+import logger from './common/utils/logger';
+import dataTransform from './common/utils/data-transform';
+import errorHandler from './middleware/error-handler';
 import apiSwaggerDoc from './common/api-swagger-doc';
+import { MaxResponseTimeOut, responseHeader } from './common/utils/constants';
+import loggerHandler from './middleware/logger-handler';
+import dataResponse from './common/utils/data-response';
+
 /*
  * @Description: 项目启动入口
  * @Version: Beata1.0
@@ -14,49 +18,44 @@ import apiSwaggerDoc from './common/api-swagger-doc';
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
  * @LastEditTime: 2020-09-15 23:38:15
  */
+const expressListEndpoints = require('express-list-endpoints');
+
+const app = express();
+const { port, hostname } = globalConfig;
 
 export default function () {
-  const app = express();
-  // 中间件使用
-  // app.use(loggerHandler);
-  router(app);
-  app.use('/test', (req, res) => res.send({ code: 1 }));
-
-  apiSwaggerDoc(app);
-
-  // app.use('/doc', express.static('view'));
-
   console.log(globalConfig);
 
-  // 配置 swagger-jsdoc
-  const options = {
-    definition: {
-      // swagger 采用的 openapi 版本 不用改
-      openapi: '3.0.0',
-      // swagger 页面基本信息 自由发挥
-      info: {
-        title: 'Express Template',
-        version: '1.0.0'
-      }
-    },
-    // 重点，指定 swagger-jsdoc 去哪个路由下收集 swagger 注释
-    apis: [path.join(__dirname, '/router/*.js')]
-  };
-  const swaggerSpec = swaggerJSDoc(options);
-
-  // 开放 swagger 相关接口，
-  app.get('/swagger.json', (req, res) => {
-    res.setHeader('Content-Type', 'application/json');
-    res.send(swaggerSpec);
+  // 路由请求超时的中间件
+  app.use((req, res, next) => {
+    // 这里必须是Response响应的定时器【10秒】
+    res.setTimeout(MaxResponseTimeOut, () => res.json(dataResponse.returnFormat(false, '请求超时，服务端异常')));
+    next();
   });
 
-  // 使用 swaggerSpec 生成 swagger 文档页面，并开放在指定路由
-  app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+  app.use(loggerHandler);
 
-  app.listen(globalConfig.port, globalConfig.hostname, () => {
+  /** ----------------------------- 请求参数处理 ------------------------------ */
+  app.use(bodyParser.urlencoded({ extended: false }));
+  app.use(bodyParser.json());
+  /** ----------------------------- 请求参数处理 ------------------------------ */
+
+  app.use((req, res, next) => {
+    res.set(responseHeader);
+    res.status(200);
+    next();
+  });
+  router(app, express.Router());
+  /** ----------------------------- 统一错误处理 ------------------------------ */
+  app.use(errorHandler);
+  apiSwaggerDoc(app);
+
+  app.listen(port, hostname, () => {
     logger.info(
-      `express-demo started at : http://${globalConfig.hostname}:${globalConfig.port}
-            `
+      `express-demo started at: ${dataTransform.getServiceStartPath()}`
     );
   });
+
+  // 输出路由日志
+  dataTransform.printRegisteredRouter(expressListEndpoints(app));
 }

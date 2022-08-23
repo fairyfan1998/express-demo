@@ -24,5 +24,9 @@ export default {
     username: 'default',
     password: '',
     db: 10
+  },
+  swagger: {
+    apiDocRouter: '/doc',
+    apiDocJSONRouter: '/api-swagger.json'
   }
 };

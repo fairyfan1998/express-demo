@@ -11,10 +11,18 @@ export default class BaseService {
     this.modelEntity = modelEntity;
   }
 
+  /**
+   * 创建
+   * @param entity
+   */
   async create(entity) {
     return this.modelEntity.create(entity);
   }
 
+  /**
+   * 更新
+   * @param entity
+   */
   async update(entity) {
     return this.modelEntity.update(entity, {
       where: {
@@ -23,12 +31,20 @@ export default class BaseService {
     });
   }
 
+  /**
+   * 根据主键查询
+   * @param id
+   */
   async findOneById(id) {
     return this.modelEntity.findOne({
       where: { id }
     });
   }
 
+  /**
+   * 根据主键逻辑删除
+   * @param id
+   */
   async deleteById(id) {
     return this.modelEntity.update(
       {
@@ -40,6 +56,11 @@ export default class BaseService {
     );
   }
 
+  /**
+   * 根据主键物理删除
+   * @param id
+   * @returns {Promise<*>}
+   */
   async destroyById(id) {
     return this.modelEntity.destroy({
       where: { id }
