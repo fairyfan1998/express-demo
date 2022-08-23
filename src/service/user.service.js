@@ -8,6 +8,10 @@ export default class UserService extends BaseService {
     return this.modelEntity.findAll();
   }
 
+  /**
+   * 根据用户名查询
+   * @param username
+   */
   async findOneByUserName(username) {
     return this.modelEntity.findOne({
       raw: true,
@@ -17,6 +21,9 @@ export default class UserService extends BaseService {
     });
   }
 
+  /**
+   * 查询所有用户
+   */
   async findAllUser() {
     return this.modelEntity.findAll({
       raw: true

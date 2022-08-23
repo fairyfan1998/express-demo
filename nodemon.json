@@ -6,8 +6,7 @@
   ],
   "verbose": true,
   "watch": [
-    "src/*",
-    "global-config/*"
+    "src/*"
   ],
   "stdin": true,
   "env": {

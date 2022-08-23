@@ -6,7 +6,7 @@ import dataTransform from '../common/utils/data-transform';
 const userService = new UserService(database.userEntityRepo);
 
 export default {
-  async createUser(req, res) {
+  createUser: async (req, res) => {
     const user = req.body;
     const userInDB = await userService.findOneByUserName(user.username);
     console.log(userInDB);
@@ -21,7 +21,14 @@ export default {
   },
   async updateUser(req, res) {
     const user = req.body;
+    const userInDB = await userService.findOneById(user.id);
+
+    if (userInDB == null) {
+      res.json(dataResponse.returnFormat(false, '用户不存在'));
+      return;
+    }
     await userService.update(user);
+    res.json(dataResponse.returnFormat(true, '用户信息更新成功'));
   },
 
   async findAllUser(req, res) {
@@ -37,10 +44,24 @@ export default {
 
   async deleteUserById(req, res) {
     const { id } = req.body;
+    const userInDB = await userService.findOneById(id);
+
+    if (userInDB == null) {
+      res.json(dataResponse.returnFormat(false, '用户不存在'));
+      return;
+    }
     await userService.destroyById(id);
+    res.json(dataResponse.returnFormat(true));
   },
   async destroyUserById(req, res) {
     const { id } = req.body;
+    const userInDB = await userService.findOneById(id);
+
+    if (userInDB == null) {
+      res.json(dataResponse.returnFormat(false, '用户不存在'));
+      return;
+    }
     await userService.destroyById(id);
+    res.json(dataResponse.returnFormat(true));
   }
 };
