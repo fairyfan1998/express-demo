@@ -25,7 +25,7 @@ export default (userRouter) => {
    * }
    */
   userRouter.post(
-    '/user',
+    '/',
     validateData(userRule.createUserRule, validateType.POST),
     userController.createUser
   );
@@ -48,7 +48,7 @@ export default (userRouter) => {
    * }
    */
   userRouter.post(
-    '/user/info',
+    '/info',
     validateData(userRule.updateUserRule, validateType.POST),
     userController.updateUser
   );
@@ -71,7 +71,7 @@ export default (userRouter) => {
    * }
    */
   userRouter.post(
-    '/user/destroy',
+    '/destroy',
     validateData(userRule.deleteUserRule, validateType.POST),
     userController.destroyUserById
   );
@@ -94,7 +94,7 @@ export default (userRouter) => {
    * }
    */
   userRouter.post(
-    '/user/delete',
+    '/delete',
     validateData(userRule.destroyUserRule, validateType.POST),
     userController.deleteUserById
   );
@@ -111,7 +111,7 @@ export default (userRouter) => {
    *   "result":[]
    * }
    */
-  userRouter.get('/user/list', userController.findAllUser);
+  userRouter.get('/list', userController.findAllUser);
   /**
    * get /api/v1/user/{id}
    * @tags 用户相关
@@ -129,6 +129,6 @@ export default (userRouter) => {
    *   "result":{}
    * }
    */
-  userRouter.get('/user/:id', userController.findOneById);
+  userRouter.get('/:id', userController.findOneById);
   return userRouter;
 };

@@ -8,12 +8,12 @@ import dataResponse from '../common/utils/data-response';
  * @param next
  */
 export default function (error, req, res, next) {
-  console.log(1212, 'error-handle--start');
+  console.log('------error-handle--start------');
   console.log(error);
   if (error != null) {
     const { status, message } = error;
     res.send(dataResponse.returnFormat(false, message, status));
   }
-  console.log(1212, 'error-handle---end');
+  console.log('------error-handle---end------');
   next();
 }

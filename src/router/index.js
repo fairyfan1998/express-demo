@@ -13,6 +13,6 @@ import healthRouter from './health.router';
 
 export default function (app, router) {
   // 路由
-  app.use('/api/v1', userRouter(router));
-  app.use('/api/v1', healthRouter(router));
+  app.use('/api/v1/user', userRouter(router));
+  app.use('/api/v1/health', healthRouter(router));
 }

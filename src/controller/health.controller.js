@@ -8,10 +8,15 @@
  */
 
 import dataResponse from '../common/utils/data-response';
+import redisCache from '../common/redis-cache';
+import database from '../database';
 
 export default {
-
   async checkMysql(req, res) {
-    res.send(dataResponse.returnFormat());
+    res.send(dataResponse.returnFormat(!!database.sequelizeInstance));
+  },
+
+  async checkRedis(req, res) {
+    res.json(dataResponse.returnFormat(!!redisCache.redisInstance));
   }
 };

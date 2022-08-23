@@ -7,4 +7,10 @@
  * @LastEditTime: 2020-09-16 23:12:28
  */
 
-export default (healthRouter) => healthRouter;
+import healthController from '../controller/health.controller';
+
+export default (healthRouter) => {
+  healthRouter.get('/mysql', healthController.checkMysql);
+  healthRouter.get('/redis', healthController.checkRedis);
+  return healthRouter;
+};
