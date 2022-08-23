@@ -1,5 +1,5 @@
 import SequelizeFactory from './sequelize.factory';
-import globalConfig from '../../global-config';
+import globalConfig from '../global-config';
 import UserEntity from './user.entity';
 
 const {

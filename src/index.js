@@ -13,6 +13,7 @@
 // 启动项目
 import bootstrap from './bootstrap';
 import database from './database';
+import 'babel-polyfill';
 
 /** -----------------------------database start------------------------------ */
 database.sequelizeInstance.sync({

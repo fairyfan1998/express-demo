@@ -1,43 +1,43 @@
 {
-    "apps": [
-        {
-            "name": "express-demo-default",
-            "script": "src/app.js",
-            "merge_logs": true,
-            "exec_interpreter": "node",
-            "exec_mode": "fork",
-            "instances": 1,
-            "autorestart": true,
-            "max_memory_restart": "300M",
-            "env": {
-                "NODE_ENV": "production"
-            }
-        },
-        {
-            "name": "express-demo-test",
-            "script": "src/app.js",
-            "merge_logs": true,
-            "exec_interpreter": "node",
-            "exec_mode": "fork",
-            "instances": 1,
-            "autorestart": true,
-            "max_memory_restart": "300M",
-            "env": {
-                "NODE_ENV": "test"
-            }
-        },
-        {
-            "name": "express-demo-prod",
-            "script": "src/app.js",
-            "merge_logs": true,
-            "exec_interpreter": "node",
-            "exec_mode": "fork",
-            "instances": 1,
-            "autorestart": true,
-            "max_memory_restart": "300M",
-            "env": {
-                "NODE_ENV": "prod"
-            }
-        }
-    ]
+  "apps": [
+    {
+      "name": "express-demo-default",
+      "script": "dist/index.js",
+      "merge_logs": true,
+      "exec_interpreter": "node",
+      "exec_mode": "fork",
+      "instances": 1,
+      "autorestart": true,
+      "max_memory_restart": "300M",
+      "env": {
+        "NODE_ENV": "development"
+      }
+    },
+    {
+      "name": "express-demo-test",
+      "script": "dist/index.js",
+      "merge_logs": true,
+      "exec_interpreter": "node",
+      "exec_mode": "fork",
+      "instances": 1,
+      "autorestart": true,
+      "max_memory_restart": "300M",
+      "env": {
+        "NODE_ENV": "test"
+      }
+    },
+    {
+      "name": "express-demo-prod",
+      "script": "dist/index.js",
+      "merge_logs": true,
+      "exec_interpreter": "node",
+      "exec_mode": "fork",
+      "instances": 1,
+      "autorestart": true,
+      "max_memory_restart": "300M",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    }
+  ]
 }
