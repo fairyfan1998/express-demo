@@ -1,6 +1,6 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-import globalConfig from '../global-config';
+import globalConfig from './global-config';
 import router from './router';
 import logger from './common/utils/logger';
 import dataTransform from './common/utils/data-transform';

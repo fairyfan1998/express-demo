@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e4d15bae-3cdc-45a4-a700-ce36794c11ac" name="变更" comment="feat: 接口超时优化，添加工具函数封装">
+    <list default="true" id="e4d15bae-3cdc-45a4-a700-ce36794c11ac" name="变更" comment="fix: 动态路由doc优化">
+      <change beforePath="$PROJECT_DIR$/.babelrc" beforeDir="false" afterPath="$PROJECT_DIR$/.babelrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/user.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/user.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router/user.router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/user.router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/global-config/default.env.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/global-config/default.env.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/global-config/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/global-config/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/global-config/prod.env.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/global-config/prod.env.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/global-config/test.env.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/global-config/test.env.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pm2.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/pm2.config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/api-swagger-doc/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/api-swagger-doc/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/redis-cache/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/redis-cache/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/utils/data-transform.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/utils/data-transform.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +70,11 @@
     <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="SwaggerCodegen">
@@ -152,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661181593997</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="fix: 动态路由doc优化">
+      <created>1661184372757</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1661184372757</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,7 +214,8 @@
     <MESSAGE value="feat: user 参数校验模板，优化中间件处理" />
     <MESSAGE value="feat：添加参数校验模板，新增user数据库操作service" />
     <MESSAGE value="feat: 接口超时优化，添加工具函数封装" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: 接口超时优化，添加工具函数封装" />
+    <MESSAGE value="fix: 动态路由doc优化" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: 动态路由doc优化" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

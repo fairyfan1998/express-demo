@@ -1,5 +1,5 @@
 import expressJSDocSwagger from 'express-jsdoc-swagger';
-import globalConfig from '../../../global-config';
+import globalConfig from '../../global-config';
 import logger from '../utils/logger';
 import dataTransform from '../utils/data-transform';
 

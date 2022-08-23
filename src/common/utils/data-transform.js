@@ -6,7 +6,7 @@ import jwt from 'jsonwebtoken';
 import stringRandom from 'string-random';
 import { v1 } from 'uuid';
 import crypto from 'crypto';
-import globalConfig from '../../../global-config';
+import globalConfig from '../../global-config';
 import logger from './logger';
 import { accessTokenSecret, md5Secret, randomStrLetterKey } from './constants';
 
