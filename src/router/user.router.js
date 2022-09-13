@@ -130,5 +130,6 @@ export default (userRouter) => {
    * }
    */
   userRouter.get('/:id', userController.findOneById);
+
   return userRouter;
 };
