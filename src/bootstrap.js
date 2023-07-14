@@ -24,8 +24,6 @@ const app = express();
 const { port, hostname } = globalConfig;
 
 export default function () {
-  console.log(globalConfig);
-
   // 路由请求超时的中间件
   app.use((req, res, next) => {
     // 这里必须是Response响应的定时器【10秒】
