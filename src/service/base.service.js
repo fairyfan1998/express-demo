@@ -59,7 +59,6 @@ export default class BaseService {
   /**
    * 根据主键物理删除
    * @param id
-   * @returns {Promise<*>}
    */
   async destroyById(id) {
     return this.modelEntity.destroy({
